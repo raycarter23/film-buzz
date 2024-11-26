@@ -23,6 +23,10 @@ View live site here: Film Buzz website
 
 ### Colour Scheme
 
+### Contrast Ratio: Primary Colours
+
+### Contrast Ratio: Secondary Colours
+
 ### Typography
 
 ### Logo design
