@@ -23,6 +23,17 @@ View live site here: Film Buzz website
 
 ### Colour Scheme
 
+- YinMn Blue `#294E79` - used as the primary site colour, and secondary background colour for the footer.
+
+- White `#FFFFFF` - used as site background colour for a clean and minimalistic design.
+
+- Light Cyan `#D3F3FA` - used as an accent text colour on the YinMn Blue footer.
+
+- Quinacridone Magenta `#79425B` - used as a secondary colour to add contrast and variety.
+
+- Seal Brown `#603317` - used for the trash icon,  notification icon and warning buttons to ensure prominence and clarity.
+
+
 ### Contrast Ratio: Primary Colours
 
 ### Contrast Ratio: Secondary Colours
