@@ -34,6 +34,8 @@ View live site here: Film Buzz website
 - Seal Brown `#603317` - used for the trash icon,  notification icon and warning buttons to ensure prominence and clarity.
 
 
+![Colour Scheme](documentation/images/colour-scheme.png)
+
 ### Contrast Ratio: Primary Colours
 
 ### Contrast Ratio: Secondary Colours
