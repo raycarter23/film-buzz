@@ -36,9 +36,33 @@ View live site here: Film Buzz website
 
 ![Colour Scheme](documentation/images/colour-scheme.png)
 
+To design a visually appealing and thematic colour palette for my website, I utilised a combination of [Color Hunt](https://colorhunt.co/) and [Coolors](https://coolors.co/). My goal was to craft a palette that resonates with movie enthusiasts, blending style and accessibility.
+
+The centrepiece of this palette is **YInMn Blue**, chosen as the primary colour to define the brand identity of Film Buzz with its vibrant and modern appeal. Complementing this, I selected **White** as the background colour to ensure a clean, easy-to-read layout that enhances the overall user experience.
+
 ### Contrast Ratio: Primary Colours
 
+I wanted to ensure that the chosen primary text colour (**YInMn Blue** - `#294E79`) and background colour (**White** - `#FFFFFF`) met the web accessibility standards outlined by [WCAG](https://www.wcag.com/). WCAG defines a minimum colour contrast ratio of **4.5:1** for normal text and **3:1** for large text.
+
+I tested the contrast ratio using [Adobe’s](https://color.adobe.com/create/color-contrast-analyzer) colour contrast checker tool, which gave me a contrast ratio of **8.54:1**, and ensured that good readability for visually impaired site users. 
+
+![Primary Colours Contrast Ratio](documentation/images/blue-white-colour-contrast.png)
+
 ### Contrast Ratio: Secondary Colours
+
+I also used [Venngage’s Accessible Color Palette Generator](https://venngage.com/tools/accessible-color-palette-generator) to create complementary colours that harmonise seamlessly with my primary colour while adhering to WCAG colour accessibility standards. To ensure optimal readability, I tested the contrast ratios of these colours using Adobe's Colour Contrast Checker tool. This process guided my design decisions and helped me pair colours effectively throughout my website.
+
+For light cyan on a YInMn Blue background, I achieveed a contrast ratio of **7.3:1** 
+
+![Cyan and Blue Contrast](documentation/images/cyan-blue-colour-contrast.png)
+
+For quinacridone magenta on a white background, I achieved a contrast ratio of **7.65:1**
+
+![Magenta and White Contrast](documentation/images/magenta-white-colour-contrast.png)
+
+For seal brown on a white background, I achieved a contrast ratio of **10.59:1**
+
+![Brown and White Contrast](documentation/images/brown-white-colour-contrast.png)
 
 ### Typography
 
