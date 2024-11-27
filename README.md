@@ -105,7 +105,9 @@ View live site here: Film Buzz website
 
 ## Wireframes
 
+### Low-Fidelity Wireframes
 
+### High-Fidelity Wireframes
 
 
 ## Features
