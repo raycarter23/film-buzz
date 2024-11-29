@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-*52pg4g4ip4jg$u4$@h4^&9j8r*dtl9fs-t$q$^7@@+vnt4g$#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-raycarter23-filmbuzz-5kwcihbyszf.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['8000-raycarter23-filmbuzz-5kwcihbyszf.ws.codeinstitute-ide.net', 'film-buzz-374754df9761.herokuapp.com']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://*.codeinstitute-ide.net',
