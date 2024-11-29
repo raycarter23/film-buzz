@@ -1,1 +1,0 @@
-web: gunicorn film_buzz.wsgi -log-file - 
