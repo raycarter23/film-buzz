@@ -75,7 +75,9 @@ For seal brown on a white background, I achieved a contrast ratio of **10.59:1**
 
 ### Logo design
 
+I used [Logo Design AI](https://logodesign.ai/) to generate the following logo design for my website. I also generated the same logo with a white background, which was used in the footer section of the website, and I removed the background using [Remove Bg](https://www.remove.bg/)
 
+![Logo](documentation/images/logo.png)
 
 ## User Stories
 
