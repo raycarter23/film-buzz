@@ -38,6 +38,18 @@ By offering these features, Film Buzz becomes a hub for celebrating cinema, fost
 
 ### Target Audience
 
+Film Buzz is designed to cater to a wide range of movie lovers, each with unique needs and interests:
+- **Movie Enthusiasts**:
+    - People who are passionate about watching, reviewing, and discussing movies.
+- **Casual Viewers**:
+    - Individuals looking for movie recommendations and reviews to decide what to watch next.
+- **Reviewers and Bloggers**:
+    - Professionals or hobbyists who want to share detailed critiques and engage with their audience.
+- **Social Users**:
+    - Users who enjoy following others, discovering popular content, and engaging in discussions.
+- **Students and Professionals in the Film Industry**:
+    - Aspiring filmmakers, critics, and actors seeking inspiration and community insights.
+
 ## UX
 
 ### Design Inspiration
