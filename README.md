@@ -56,15 +56,22 @@ For light cyan on a YInMn Blue background, I achieveed a contrast ratio of **7.3
 
 ![Cyan and Blue Contrast](documentation/images/cyan-blue-colour-contrast.png)
 
+
 For quinacridone magenta on a white background, I achieved a contrast ratio of **7.65:1**
 
 ![Magenta and White Contrast](documentation/images/magenta-white-colour-contrast.png)
+
 
 For seal brown on a white background, I achieved a contrast ratio of **10.59:1**
 
 ![Brown and White Contrast](documentation/images/brown-white-colour-contrast.png)
 
 ### Typography
+
+- [Raleway](https://fonts.google.com/specimen/Raleway) - Used for headings and buttons.
+- [Inter](https://fonts.google.com/specimen/Inter) - Used for site text and paragraphs.
+
+![Fonts Used](documentation/images/typography.png)
 
 ### Logo design
 
@@ -126,7 +133,7 @@ For seal brown on a white background, I achieved a contrast ratio of **10.59:1**
 
 - As a registered user I can comment on other users' posts so that I can engage with them in a discussion. `Should Have`
 
-- As a user I can follow other users so that I can keep up with their posts. `Could Have`
+- As a user I can follow other users so that I can keep up with their posts. `Should Have`
 
 - As a registered user I can create my own watchlist so that I can track movies I am interested in watching. `Could Have`
 
