@@ -199,15 +199,43 @@ I used [Logo Design AI](https://logodesign.ai/) to generate the following logo d
 
 ## Agile Development Process
 
-
 ### MoSCoW Prioritisation
 
-### Sprints
+### GitHub Projects 
 
-### GitHub projects 
+I used [GitHub Projects](https://github.com/users/raycarter23/projects/3) as an Agile tool to streamline the development process for this project.
+
+The **Kanban Board** provided by GitHub Projects enabled me to:
+- Organise tasks according to the development cycle phases: Backlog, To Do, In Progress, and Done
+- Map out the workflow for user stories and their implementation
+- Visualise the progression of user stories at every stage
+- Track progress by moving tasks across columns as they were completed
+
+Here is an overview of my GitHub Projects setup at the beginning of the development process:
+
+![GitHub Project Board](documentation/agile-process/user-stories-stage-1.png)
 
 ### GitHub Issues
 
+I used GitHub Issues to create and manage my User Stories.
+
+My User Stories were created using the following template:
+
+- As a **role** I can **capability** so that **received benefit** 
+
+For each user story, I defined its acceptance criteria, and any tasks relating to its completion.
+
+Once I mapped out my user stories, I added them to my GitHub Projects board with their MoSCoW prioritisation labels
+
+Here is what my GitHub issues looked like at the **start** of the initial development process:
+
+![GitHub Issues Part 1](documentation/agile-process/github-issues-p1.png)
+
+![GitHub Issues Part 2](documentation/agile-process/github-issues-p2.png)
+
+![GitHub Issues Part](documentation/agile-process/github-issues-p3.png)
+
+Here is what my GitHub issues looked like at the **end** of the development process:
 
 
 ## Testing 
