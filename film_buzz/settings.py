@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'categories',
     'comments',
     'watchlist',
+    'flagged_posts',
 ]
 
 MIDDLEWARE = [
