@@ -248,7 +248,19 @@ Here is what my GitHub issues looked like at the **end** of the development proc
 
 ## Tools & Technologies Used 
 
+### Libraries and Frameworks
 
+-
+-
+-
+
+Additional details can be found in the [requirements.txt](https://github.com/raycarter23/film-buzz/blob/main/requirements.txt) file
+
+### Tools and Programmes 
+
+-
+-
+-
 
 ## Credits
 
