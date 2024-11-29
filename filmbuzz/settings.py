@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-g1zun*x)$8s=i2@b)%w&l-0te!j^w^0s2y+x3pg3w^0j_jzo%@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['8000-raycarter23-filmbuzz-5kwcihbyszf.ws.codeinstitute-ide.net',]
+ALLOWED_HOSTS = ['8000-raycarter23-filmbuzz-5kwcihbyszf.ws.codeinstitute-ide.net', 'https://film-buzz-3729799f06ec.herokuapp.com/',]
 
 
 # Application definition
