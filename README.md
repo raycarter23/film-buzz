@@ -231,7 +231,15 @@ I used [Logo Design AI](https://logodesign.ai/) to generate the following logo d
 
 ## Database Design
 
+I created an Entity Relationship Diagram using [Miro](https://miro.com/) to visually represent the relationships between the data models in Film Buzz, such as users, posts, comments, categories, and watchlists. This diagram highlights key relationships, such as the one-to-many connection between users and posts, and the many-to-many self-referential relationship for followers. 
 
+To improve clarity, I colour-coded the database tables: standard models, such as users, posts and comments, are shown in grey; while custom models, such as watchlists, categories, follows and flagged posts, are displayed in blue. This approach ensures the database structure aligns with the application’s requirements and supports features like flagging posts, filtering by categories, and tracking personalised watchlists.
+
+### Entity Relationship Diagram
+
+![ER Diagram](documentation/images/film-buzz-er-diagram.jpg)
+
+### Models
 
 ## Agile Development Process
 
