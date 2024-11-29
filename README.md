@@ -15,7 +15,28 @@ View live site here: Film Buzz website
 
 ## Table of Contents
 
+## Overview
 
+### About
+
+Film Buzz is a dynamic movie blog platform built with Django, designed to celebrate cinema and provide a space for movie lovers to explore, discuss, and engage with the world of film. 
+
+The goal of this project is to create an accessible and engaging platform for casual viewers, film enthusiasts, and aspiring movie bloggers alike. Built with the powerful Django framework, Film Buzz combines functionality with user-friendly design to deliver an enjoyable and seamless experience for all.
+
+### Purpose
+
+Many movie enthusiasts struggle to find a platform where they can read insightful reviews, explore curated movie recommendations, and stay updated on the latest in cinema. While casual viewers seek engaging content to guide their next movie choice, aspiring reviewers and bloggers often lack a centralised space to share their thoughts and connect with like-minded individuals. This gap leaves movie lovers without an accessible, community-driven hub for exploring and discussing their passion for film.
+
+Film Buzz aims to solve this problem by providing a simple and engaging platform for movie enthusiasts to:
+- Discover insightful reviews on a variety of films.
+- Explore curated movie recommendations tailored to different tastes and genres.
+- Read thought-provoking blogs and articles about cinema, including behind-the-scenes content and trends.
+- Engage with content designed to inspire a deeper appreciation for the art of film.
+- Offer a space for aspiring movie bloggers and critics to share their perspectives and grow their audience.
+
+By offering these features, Film Buzz becomes a hub for celebrating cinema, fostering connection, and guiding viewers in their cinematic journeys.
+
+### Target Audience
 
 ## UX
 
