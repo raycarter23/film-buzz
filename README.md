@@ -15,6 +15,42 @@ View live site here: [Film Buzz website](https://film-buzz-374754df9761.herokuap
 
 ## Table of Contents
 
+- [Overview](#overview)
+  - [About](#about)
+  - [Purpose](#purpose)
+  - [Target Audience](#target-audience)
+- [UX](#ux)
+  - [Design Inspiration](#design-inspiration)
+  - [Colour Scheme](#colour-scheme)
+  - [Contrast Ratio: Primary Colours](#contrast-ratio-primary-colours)
+  - [Contrast Ratio: Secondary Colours](#contrast-ratio-secondary-colours)
+  - [Typography](#typography)
+  - [Logo Design](#logo-design)
+- [User Stories](#user-stories)
+  - [Developer](#developer)
+  - [Site Admin](#site-admin)
+  - [New Site Users](#new-site-users)
+  - [Registered Users](#registered-users)
+- [Wireframes](#wireframes)
+  - [Low-Fidelity Wireframes](#low-fidelity-wireframes)
+  - [High-Fidelity Wireframes](#high-fidelity-wireframes)
+- [Features](#features)
+- [Database Design](#database-design)
+- [Agile Development Process](#agile-development-process)
+  - [MoSCoW Prioritisation](#moscow-prioritisation)
+  - [GitHub Projects](#github-projects)
+  - [GitHub Issues](#github-issues)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Tools & Technologies Used](#tools--technologies-used)
+  - [Libraries and Frameworks](#libraries-and-frameworks)
+  - [Tools and Programmes](#tools-and-programmes)
+- [Credits](#credits)
+  - [Content](#content)
+  - [Code](#code)
+  - [Media](#media)
+  - [Acknowledgements](#acknowledgements)
+  
 ## Overview
 
 ### About
