@@ -242,7 +242,6 @@ Here is what my GitHub issues looked like at the **end** of the development proc
 
 For detailed information on testing, please see the [TESTING.md](https://github.com/raycarter23/film-buzz/blob/main/TESTING.md) file.
 
-
 ## Deployment
 
 
