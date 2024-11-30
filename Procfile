@@ -1,1 +1,1 @@
-web: gunicorn filmbuzz.wsgi
+web: gunicorn filmbuzz.wsgi:application --log-file -
