@@ -5,5 +5,5 @@ from django.template import loader
 # Create your views here.
 
 def users(request):
-    template = loader.get_template('users.html')
+    template = loader.get_template('index.html')
     return HttpResponse(template.render())
