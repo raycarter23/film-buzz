@@ -239,7 +239,176 @@ To improve clarity, I colour-coded the database tables: standard models, such as
 
 ![ER Diagram](documentation/images/film-buzz-er-diagram.jpg)
 
-### Models
+### Models Overview
+
+The Film Buzz platform uses three standard models (**User**, **Post**, and **Commen**t) and four custom models (**Category**, **Watchlist**, **Follow**, and **FlaggedPost**) to manage its data structure. The standard models provide the foundation for user authentication, content creation, and engagement, while the custom models introduce features such as post categorisation, personalised watchlists, social connections, and content moderation. These models are interconnected through carefully designed foreign key relationships, ensuring data integrity, consistency, and efficient interaction across the platform's features.
+
+### Standard Models 
+
+**User Model**
+
+The User model represents registered users on the Film Buzz platform. It is the central model for user authentication, profile management, and role determination. This model allows for features such as user sign-up, login, and account customisation.
+
+- User - Django AllAuth Model
+
+| Key           | Field       | Type         | Purpose                                  |
+|---------------|-------------|--------------|------------------------------------------|
+| **Primary Key** | `userId`    | INTEGER (PK) | Unique identifier for each user          |
+|               | `username`   | VARCHAR(50)  | Display name chosen by the user          |
+|               | `email`      | VARCHAR(255) | User's email for authentication and contact |
+|               | `password`   | VARCHAR(255) | Hashed password for secure login         |
+|               | `is_admin`   | BOOLEAN      | Indicates whether the user has admin privileges |
+|               | `bio`        | VARCHAR(255) | Optional biography or personal description |
+|               | `date_joined`| DATE         | Date when the user registered on the platform |
+
+**Relationships**
+
+- **One-to-Many with the Post model**:
+  - A user can create multiple posts.
+  - Linked via the `author` field in the Post model, which is a foreign key to the User model.
+- **One-to-Many with the Comment model**:
+  - A user can leave multiple comments on posts.
+  - Linked via the `author` field in the Comment model, which is a foreign key to the User model.
+- **Many-to-Many with itself (Follow model)**:
+  - Represents user-to-user connections, such as followers and followees.
+  - Managed through a self-referential relationship in the Follow model.
+
+---
+
+**Post Model**
+
+The Post model represents a blog post or movie review created by a user on the Film Buzz platform. Each post serves as a piece of content that users can view, interact with, and categorise. Posts are associated with an author (user), timestamps, and categories to provide structure and allow for filtering and moderation.
+
+- Post Model
+
+| Key           | Field       | Type         | Purpose                                  |
+|---------------|-------------|--------------|------------------------------------------|
+| **Primary Key** | `post_id`   | INTEGER (PK) | Unique identifier for each post          |
+|               | `title`      | VARCHAR(255) | Title of the post or review              |
+|               | `content`    | VARCHAR(5000)| Main body of the post or review          |
+|               | `created_at` | TIMESTAMP    | Records the date and time the post was created |
+|               | `updated_at` | TIMESTAMP    | Records the date and time the post was last modified |
+| **Foreign Key**| `author_id`  | INTEGER (FK) | Links the post to the user who created it |
+|               | `is_flagged` | BOOLEAN      | Indicates whether the post is flagged for review |
+|               | `category`   | VARCHAR(20)  | Categorises the post into a specific genre or type |
+
+**Relationships**
+
+- **One-to-Many with User**:
+  - A single user (author) can create multiple posts.
+  - The `author_id` field serves as a foreign key linking the Post model to the User model.
+- **One-to-Many with Comment**:
+  - A single post can have multiple comments.
+  - Linked via the `post_id` field in the Comment model.
+- **Many-to-One with Category**:
+  - Each post belongs to one category, which helps users filter posts by genre.
+
+---
+
+**Comment Model**
+
+The Comment model represents user-generated comments on posts in Film Buzz. It allows users to share their thoughts or feedback on a specific post, fostering engagement and community interaction on the platform. Each comment is tied to a specific user (the author of the comment) and a specific post.
+
+- Comment Model
+
+| Key           | Field       | Type         | Purpose                                  |
+|---------------|-------------|--------------|------------------------------------------|
+| **Primary Key** | `comment_id`| INTEGER (PK) | Unique identifier for each comment       |
+|               | `content`    | VARCHAR(500) | Stores the text of the comment           |
+|               | `created_at` | TIMESTAMP    | Records when the comment was created     |
+| **Foreign Key**| `author_id`  | INTEGER (FK) | Links the comment to the user who authored it |
+|               | `post_id`    | INTEGER (FK) | Links the comment to the post it belongs to |
+
+**Relationships**
+
+- **One-to-Many with User**:
+  - A single user (User) can author multiple comments (Comment).
+  - The `author_id` field links the Comment model to the User model.
+- **One-to-Many with Post**:
+  - A single post (Post) can have multiple comments (Comment).
+  - The `post_id` field links the Comment model to the Post model.
+
+### Custom Models
+
+**Category Model**
+
+The Category model represents the predefined genres or classifications for blog posts or reviews on Film Buzz. Each category groups related posts to improve organisation, filtering, and discoverability.
+
+- Category Model
+
+| Key           | Field       | Type         | Purpose                                  |
+|---------------|-------------|--------------|------------------------------------------|
+| **Primary Key** | `category_id`| INTEGER (PK) | Unique identifier for each category      |
+|               | `name`       | VARCHAR(20)  | Stores the name of the category (e.g. "Comedy") |
+
+**Relationships**
+
+- **One-to-Many with Post**:
+  - A single category can have many posts assigned to it.
+  - The `category_id` field is referenced as a foreign key in the Post model.
+
+---
+
+**Watchlist Model**
+
+The Watchlist model represents a personalised list of movies that a user wants to keep track of on Film Buzz. It allows users to save the titles of movies they are interested in watching, creating an organised system for tracking and revisiting their favourite picks or upcoming films.
+
+- Watchlist Model
+
+| Key           | Field       | Type         | Purpose                                  |
+|---------------|-------------|--------------|------------------------------------------|
+| **Primary Key** | `watchlist_id`| INTEGER (PK) | Unique identifier for each watchlist entry |
+| **Foreign Key**| `user_id`    | INTEGER (FK) | Links the watchlist entry to the owning user |
+|               | `movie_title`| VARCHAR(30)  | Stores the title of the movie in the watchlist |
+
+**Relationships**
+
+- **One-to-Many with User**:
+  - A single user can have multiple movies in their watchlist.
+  - The `user_id` field acts as a foreign key linking the Watchlist model to the User model.
+
+---
+
+**Follow Model**
+
+The Follow model represents the social relationship between users on Film Buzz, allowing one user to follow another. This feature fosters community interaction and connection by enabling users to stay updated with posts and activities from those they follow.
+
+- Follow Model
+
+| Key           | Field       | Type         | Purpose                                  |
+|---------------|-------------|--------------|------------------------------------------|
+| **Primary Key** | `follow_id` | INTEGER (PK) | Unique identifier for each follow relationship |
+| **Foreign Key**| `follower_id`| INTEGER (FK) | Links the follower to the User model     |
+| **Foreign Key**| `followed_id`| INTEGER (FK) | Links the followed user to the User model |
+|               | `created_at` | TIMESTAMP    | Records when the follow relationship was created |
+
+**Relationships**
+
+- **Many-to-Many Self-Referential Relationship**:
+  - A user can follow multiple other users, and a user can be followed by multiple users.
+  - Implemented using the Follow table, which connects the `follower_id` and `followed_id` fields to the same User model.
+
+---
+
+**FlaggedPost Model**
+
+The FlaggedPost model represents posts on Film Buzz that users or admins have flagged for review. This table tracks flagged posts, the reason for flagging, and the time the flag was created. It enables site administrators to efficiently review and moderate potentially problematic content.
+
+- FlaggedPost Model
+
+| Key           | Field         | Type         | Purpose                                  |
+|---------------|---------------|--------------|------------------------------------------|
+| **Primary Key** | `flagged_id` | INTEGER (PK) | Unique identifier for each flagged record |
+| **Foreign Key**| `post_id`     | INTEGER (FK) | Links the flagged record to the Post model |
+|               | `flagged_reason` | VARCHAR(255) | Provides the reason for flagging the post |
+|               | `flagged_at`  | TIMESTAMP    | Records when the post was flagged        |
+
+**Relationships**
+
+- **One-to-One with Post**:
+  - Each flagged post in the FlaggedPost table corresponds to exactly one post in the Post model.
+  - The `post_id` field serves as a foreign key linking the two models.
+
 
 ## Agile Development Process
 
