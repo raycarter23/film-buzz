@@ -46,6 +46,12 @@ View live site here: [Film Buzz website](https://film-buzz-374754df9761.herokuap
   - [GitHub Issues](#github-issues)
 - [Testing](#testing)
 - [Deployment](#deployment)
+  - [Connecting to GitHub](#connecting-to-github)
+  - [Django Project Setup](#django-project-setup)
+  - [Cloudinary API](#cloudinary-api)
+  - [Heroku Deployment](#heroku-deployment)
+  - [Clone Project](#clone-project)
+  - [Fork Project](#fork-project)
 - [Tools & Technologies Used](#tools--technologies-used)
   - [Libraries and Frameworks](#libraries-and-frameworks)
   - [Tools and Programmes](#tools-and-programmes)
@@ -461,6 +467,36 @@ For detailed information on testing, please see the [TESTING.md](https://github.
 
 ## Deployment
 
+### Connecting to GitHub
+
+To start this project, you will need to create a new GitHub repository using the **Code Institute’s Template**. This template provides essential configurations and tools to streamline development. 
+
+Follow these steps:
+1. Log In or Sign Up:
+    * Log in to your [GitHub account](https://github.com) or create a new one if you don’t already have an account.
+2. Navigate to the Template:
+    * Open the **CI Full Template** repository provided by Code Institute. You can usually find it at this [link](https://github.com/Code-Institute-Org/ci-full-template).
+3. Use the Template:
+    * Click the Use this template button in the top-right corner of the page and select Create a new repository from the dropdown.
+4. Name Your Repository:
+    * Enter a meaningful name for your repository. Consider using a name that reflects your project (e.g., my-django-project).
+    * Optionally, add a description for your repository to clarify its purpose.
+5. Adjust Settings:
+    * Choose whether to make the repository public or private. For most Code Institute projects, the default should be public unless instructed otherwise.
+6. Create the Repository:
+    * Click the Create repository from template button to generate your new repository with all the pre-configured settings.
+7. Verify Your Setup:
+    * Open the repository in your development environment (e.g., Gitpod or VS Code) and ensure the template files have been copied over.
+
+### Django Project Setup
+
+### Cloudinary API
+
+### Heroku Deployment
+
+### Clone Project
+
+### Fork Project
 
 ## Tools & Technologies Used 
 
