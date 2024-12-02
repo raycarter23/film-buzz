@@ -33,6 +33,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-raycarter23-filmbuzz-5kwcihbyszf.ws.codeinstitute-ide.net', 'film-buzz-3729799f06ec.herokuapp.com',]
 
+CSRF_TRUSTED_ORIGINS = ["https://*.codeinstitute-ide.net", "https://*.herokuapp.com"]
 
 # Application definition
 
