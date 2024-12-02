@@ -21,5 +21,6 @@ from core.views import home, about
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('about/', about, name='about'),
+    path('', include('blog.urls')),
     path('', home, name='home'),
 ]
