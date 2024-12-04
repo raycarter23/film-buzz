@@ -137,9 +137,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Cloudinary
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME':'dxqfzsh70',
-    'API_KEY': '623743145998254',
-    'API_SECRET': 'E-JPiJTH3pBJ5bVQOjxurzJHct0',
+    'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
