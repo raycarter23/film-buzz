@@ -11,8 +11,8 @@ def blog(request):
 def details(request, slug):
     post = get_object_or_404(Post, slug=slug)
     if request.method == 'POST':
+        form = CommentForm(request.POST)
         if form.is_valid():
-            form = CommentForm(request.POST)
             comment = form.save(commit=False)
             comment.post = post
             comment.save()
