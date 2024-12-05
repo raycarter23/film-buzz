@@ -31,6 +31,16 @@ URL: https://flowbite.com/docs/components/typography/
                 {{post.content}}
             </p>
         </article>
+        <h3>Comments</h3>
+        <form method="post">
+            {{form.as_p}}
+            <button class="px-4 py-2 bg-gray-900 text-white rounded-lg">Submit Comment</button>
+        </form>
+        {% for comment in post.comments.all %}
+        <p class="font-semibold text-lg">{{comment.user}}</p>
+        <span class="mb-4 text-xs">{{comment.created_at}}</span>
+        <p>{{comment.comment}}</p>
+        {% endfor %}
     </div>
 </main>
 
