@@ -11,9 +11,9 @@ class PostAdmin(admin.ModelAdmin):
 
 # Optional: Customise Comment admin display
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ['post', 'name', 'date_added']  # Columns to display in the admin list view
+    list_display = ['post', 'name', 'created_at']  # Columns to display in the admin list view
     search_fields = ('name', 'body')  # Add a search bar for these fields
-    list_filter = ('date_added',)  # Add filters for specific fields
+    list_filter = ('created_at',)  # Add filters for specific fields
 
 admin.site.register(Post, PostAdmin)
 admin.site.register(Comment, CommentAdmin)
