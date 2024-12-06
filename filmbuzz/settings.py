@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'core.apps.CoreConfig',
     'blog.apps.BlogConfig',
     'watchlist.apps.WatchlistConfig',
+    'movies.apps.MoviesConfig',
 
     # Third-party apps
     'cloudinary',
