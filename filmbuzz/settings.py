@@ -19,6 +19,7 @@ import dj_database_url
 from dotenv import load_dotenv, dotenv_values 
 # loading variables from .env file
 load_dotenv()
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,6 +30,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv("SECRET_KEY")
+
+# TMDb API Key
+TMDB_API_KEY = config('TMDB_API_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
