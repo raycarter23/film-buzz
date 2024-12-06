@@ -31,7 +31,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-raycarter23-filmbuzz-5kwcihbyszf.ws.codeinstitute-ide.net', 'film-buzz-3729799f06ec.herokuapp.com',]
 
@@ -40,14 +40,20 @@ CSRF_TRUSTED_ORIGINS = ["https://*.codeinstitute-ide.net", "https://*.herokuapp.
 # Application definition
 
 INSTALLED_APPS = [
+    # Default Django apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Custom apps
     'core.apps.CoreConfig',
     'blog.apps.BlogConfig',
+    'watchlist.apps.WatchlistConfig'
+
+    # Third-party apps
     'cloudinary',
     'cloudinary_storage',
 ]
