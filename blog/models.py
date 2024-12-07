@@ -50,7 +50,7 @@ class Comment(models.Model):
     Represents a comment made on a movie blog post
     """
     post = models.ForeignKey(Post, related_name="comments", on_delete=models.CASCADE)
-    comment = models.TextField()
+    comment = models.CharField(max_length=500)
     created_at = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     

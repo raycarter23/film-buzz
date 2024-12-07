@@ -56,7 +56,16 @@ URL: https://flowbite.com/docs/components/typography/
             <div class="mb-4 pb-4 border-b border-gray-300">
                 <div class="flex justify-between text-sm text-gray-600">
                     <span class="font-medium">{{ comment.user.username }}</span>
-                    <span>{{ comment.created_at|date:"M d, Y H:i" }}</span>
+
+                    <div class="flex gap-4">
+                        <span>{{ comment.created_at|date:"M d, Y H:i" }}</span>
+                        {% if comment.user == user %}
+                        <form action="{% url 'delete_comment' post.slug comment.id %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="text-red-500">Delete</button>
+                        </form>
+                        {% endif %}
+                    </div>
                 </div>
                 <p class="mt-2 text-gray-700">{{ comment.comment }}</p>
             </div>

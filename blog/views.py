@@ -28,3 +28,10 @@ def comment(request, slug):
         form = CommentForm()
     comments = post.comments.all()
     return render(request, 'blog/details.html', {'post': post, 'comments': comments, 'form': form})
+
+def delete_comment(request, comment_id, slug):
+    comment = get_object_or_404(Comment, id=comment_id)
+    if request.method == 'POST' and comment.user == request.user:
+        comment.delete()
+        return redirect('details', slug=slug)
+        
