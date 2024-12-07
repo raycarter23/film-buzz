@@ -10,9 +10,10 @@ Blog
     <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
         {% for post in posts %}
         <a href="{% url 'details' post.slug %}" class="max-w-xs">
-            <img src="{{post.image.url}}" class="mb-5 rounded-lg" alt="Image 1">
+            <img src="{{post.image.url}}" class="mb-5 rounded-lg h-[180px] w-[360px]" alt="{{post.title}}">
             <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
                 <p>{{post.title}}</p>
+                <p class="text-lg font-semibold text-[#294E79]">{{post.category}}</p>
             </h2>
             <p class="mb-4 text-gray-500 dark:text-gray-400">{{post.intro}}</p>
             <p

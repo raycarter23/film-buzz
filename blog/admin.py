@@ -5,9 +5,9 @@ from django.contrib import admin
 from .models import Post, Comment, Category # Import all models
 class PostAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug':('title',)}
-    list_display = ['title', 'slug', 'created_at']  # Columns to display in the admin list view
+    list_display = ['title', 'slug', 'created_at', 'category']  # Columns to display in the admin list view
     search_fields = ['title']  # Add a search bar for these fields
-    list_filter = ('created_at',)  # Add filters for specific fields
+    list_filter = ('created_at', 'category')  # Add filters for specific fields
 
 # Optional: Customise Comment admin display
 class CommentAdmin(admin.ModelAdmin):
@@ -15,6 +15,11 @@ class CommentAdmin(admin.ModelAdmin):
     search_fields = ('user', 'body')  # Add a search bar for these fields
     list_filter = ('created_at',)  # Add filters for specific fields
 
+class CategoryAdmin(admin.ModelAdmin):
+    prepopulated_fields = {'slug': ('title',)}
+    list_display = ['title', 'slug'] 
+    search_fields = ['title']
+
 admin.site.register(Post, PostAdmin)
 admin.site.register(Comment, CommentAdmin)
-admin.site.register(Category)
+admin.site.register(Category, CategoryAdmin)
