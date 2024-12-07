@@ -22,3 +22,11 @@ def details(request, slug):
         form = CommentForm()
     return render(request, 'blog/details.html', {'post':post, 'form':form})
 
+def comment(request, slug):
+    post = post.objects.get(slug=slug)
+    if request.method == 'POST':
+        content = request.POST['message']
+        Comment(comment=content, user_id=request.user.id, post_id=post.id).save()
+
+        return redirect('details', slug=slug)
+

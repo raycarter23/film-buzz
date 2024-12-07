@@ -36,3 +36,29 @@ class Comment(models.Model):
 
     def __str__(self):
         return f'Comment from {self.user} on {self.post}'
+
+class Category(models.Model):
+    """
+    Represents a movie category
+    """
+    CATEGORY_CHOICES = (
+        ('action', 'Action'),
+        ('sci-fi', 'Sci-Fi'),
+        ('romance', 'Romance'),
+        ('drama', 'Drama'),
+        ('thriller', 'Thriller'),
+        ('comedy', 'Comedy'),
+        ('crime', 'Crime'),
+        ('biopic', 'Biopic'),
+        ('documentary', 'Documentary'),
+        ('family', 'Family')
+    )
+    title = models.CharField(max_length=30, choices=CATEGORY_CHOICES)
+    slug = models.SlugField()
+
+    def __str__(self):
+        return self.title
+    
+    def get_absolute_url(self):
+        return '/%s/' % self.slug
+
