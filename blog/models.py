@@ -6,7 +6,7 @@ class Category(models.Model):
     """
     Represents a movie category
     """
-    CATEGORY_CHOICES = (
+    CATEGORY_CHOICES = [
         ('action', 'Action'),
         ('sci-fi', 'Sci-Fi'),
         ('romance', 'Romance'),
@@ -17,7 +17,7 @@ class Category(models.Model):
         ('biopic', 'Biopic'),
         ('documentary', 'Documentary'),
         ('family', 'Family')
-    )
+    ]
     title = models.CharField(max_length=30, choices=CATEGORY_CHOICES)
     slug = models.SlugField()
 
@@ -36,7 +36,7 @@ class Post(models.Model):
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    category = models.ForeignKey(Category, related_name='posts', on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
     image = models.FileField(upload_to='media/blog')
 
     def __str__(self):
