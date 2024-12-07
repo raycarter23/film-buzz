@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import Post, Comment # Import both models
+from .models import Post, Comment, Category # Import all models
 class PostAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug':('title',)}
     list_display = ['title', 'slug', 'created_at']  # Columns to display in the admin list view
@@ -17,3 +17,4 @@ class CommentAdmin(admin.ModelAdmin):
 
 admin.site.register(Post, PostAdmin)
 admin.site.register(Comment, CommentAdmin)
+admin.site.register(Category)
