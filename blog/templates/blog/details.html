@@ -27,7 +27,7 @@ URL: https://flowbite.com/docs/components/typography/
                 <h1
                     class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">
                     {{post.title}}</h1>
-                <img class="h-[300px] rounded-lg" src="{{post.image.url}}" alt="{{post.title}}">
+                <img class="h-[400px] w-[800px] rounded-lg" src="{{post.image.url}}" alt="{{post.title}}">
             </header>
             <p>
                 {{post.content}}
@@ -35,19 +35,37 @@ URL: https://flowbite.com/docs/components/typography/
         </article>
 
     </div>
-    <div class="container w-full mx-auto">
-        <h3>Comments</h3>
-        <form method="post">
+    {% if user.is_authenticated %}
+    <div class="max-w-2xl mx-auto mt-8 p-4 border border-gray-300 rounded-lg bg-gray-50">
+        <!-- Add Comment Form -->
+        <form method="post" class="mb-6">
             {% csrf_token %}
-            {{form.as_p}}
-            <button class="px-4 py-2 bg-gray-900 text-white rounded-lg">Submit Comment</button>
+            <textarea name="message"
+                class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Add a comment..." rows="4"></textarea>
+            <button type="submit" class="mt-4 bg-[#294E79] hover:bg-[#79425B] text-white py-2 px-4 rounded-md">
+                Submit
+            </button>
         </form>
-        {% for comment in post.comments.all %}
-        <p class="font-semibold text-lg">{{comment.name}}</p>
-        <span class="mb-4 text-xs">{{comment.created_at}}</span>
-        <p>{{comment.comment}}</p>
-        {% endfor %}
+
+        <!-- Display Comments -->
+        <div>
+            <h2 class="text-lg font-bold mb-4">Comments ({{ comments.count }})</h2>
+            {% for comment in comments %}
+            <div class="mb-4 pb-4 border-b border-gray-300">
+                <div class="flex justify-between text-sm text-gray-600">
+                    <span class="font-medium">{{ comment.name }}</span>
+                    <span>{{ comment.date_added|date:"M d, Y H:i" }}</span>
+                </div>
+                <p class="mt-2 text-gray-700">{{ comment.body }}</p>
+            </div>
+            {% empty %}
+            <p class="text-gray-500">No comments yet. Be the first to comment!</p>
+            {% endfor %}
+        </div>
     </div>
+    {% endif %}
+
 </main>
 
 {% endblock %}
