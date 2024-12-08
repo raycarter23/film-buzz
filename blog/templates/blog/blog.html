@@ -12,10 +12,11 @@ Blog
         <a href="{% url 'details' post.slug %}" class="max-w-xs">
             <img src="{{post.image.url}}" class="mb-5 rounded-lg h-[180px] w-[360px]" alt="{{post.title}}">
             <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
-                <p>{{post.title}}</p>
-                <p class="text-lg font-semibold text-[#294E79]">{{post.category}}</p>
+                <p class="text-[#294E79] mb-1">{{post.title}}</p>
+                <span
+                    class="text-sm font-semibold bg-[#79425B] px-4 py-1 text-white rounded-lg">{{post.category}}</span>
             </h2>
-            <p class="mb-4 text-gray-500 dark:text-gray-400">{{post.intro}}</p>
+            <p class="mb-4 text-gray-500 dark:text-gray-400">{{post.content|slice:"0:100"}}...</p>
             <p
                 class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
                 {{post.created_at|timesince}}
