@@ -12,6 +12,7 @@ class Category(models.Model):
         ('romance', 'Romance'),
         ('drama', 'Drama'),
         ('thriller', 'Thriller'),
+        ('horror', 'Horror'),
         ('comedy', 'Comedy'),
         ('crime', 'Crime'),
         ('biopic', 'Biopic'),
