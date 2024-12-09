@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Post, Comment
+from .models import Post, Comment, Category
 from .forms import CommentForm
 from django.db.models import Q
 
@@ -9,7 +9,7 @@ def blog(request):
     posts = Post.objects.all()
     return render(request, 'blog/blog.html',{'posts':posts})
 
-def details(request, slug):
+def details(request, category_slug, slug):
     post = get_object_or_404(Post, slug=slug)
     comments = post.comments.all()
     form = CommentForm()

@@ -35,7 +35,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 TMDB_API_KEY = config('TMDB_API_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-raycarter23-filmbuzz-5kwcihbyszf.ws.codeinstitute-ide.net', 'film-buzz-3729799f06ec.herokuapp.com', '127.0.0.1']
 
