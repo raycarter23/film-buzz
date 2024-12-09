@@ -22,9 +22,6 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = ['title', 'slug'] 
     search_fields = ['title']
 
-class Summernote(SummernoteModelAdmin):
-    summernote_fields = '__all__'
-
 admin.site.register(Post, PostAdmin)
 admin.site.register(Comment, CommentAdmin)
 admin.site.register(Category, CategoryAdmin)

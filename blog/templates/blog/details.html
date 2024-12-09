@@ -30,7 +30,7 @@ URL: https://flowbite.com/docs/components/typography/
                 <img class="h-[400px] w-[800px] rounded-lg" src="{{post.image.url}}" alt="{{post.title}}">
             </header>
             <p>
-                {{post.content}}
+                {{post.content|safe}}
             </p>
         </article>
 
