@@ -21,7 +21,6 @@ class Watchlist(models.Model):
         related_name='in_watchlists',
     )
 
-    note = models.TextField(blank=True, null=True)  # User notes for the movie
     created_at = models.DateTimeField(auto_now_add=True)  # Timestamp when added to the watchlist
     slug = models.SlugField(unique=True, blank=True, null=True)  # Optional unique slug for sharing
 
@@ -44,12 +43,6 @@ class Watchlist(models.Model):
             # Generate a unique slug dynamically
             base_slug = slugify(f"{self.user.username}-{self.movie.title}")
             slug = base_slug
-
-            # Ensure uniqueness by appending a counter if necessary
-            counter = 1
-            while Watchlist.objects.filter(slug=slug).exists():
-                slug = f"{base_slug}-{counter}"
-                counter += 1
 
             self.slug = slug
         super().save(*args, **kwargs)

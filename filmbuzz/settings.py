@@ -32,7 +32,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # TMDb API Key
-TMDB_API_KEY = config('TMDB_API_KEY')
+TMDB_API_KEY = os.getenv('TMDB_API_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
