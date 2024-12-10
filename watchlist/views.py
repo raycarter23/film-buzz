@@ -13,7 +13,7 @@ def add_to_watchlist(request, movie_id):
     """
     movie = Movie.objects.filter(id=movie_id).first()
     if not movie:
-        tmdb_movie_url = f"https://api.moviedb.org/3/movie/{movie_id}?api_key={settings.TMDB_API_KEY}"
+        tmdb_movie_url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={settings.TMDB_API_KEY}"
         response = requests.get(tmdb_movie_url)
 
         if response.status_code == 200:
@@ -38,8 +38,8 @@ def add_to_watchlist(request, movie_id):
 @login_required
 def search_movies(request):
     query = request.GET.get('query')
-    tmdb_search_url = f"https://api.moviedb.org/3/search/movie?api_key={settings.TMDB_API_KEY}&query={query}"
-    response = request.get(tmdb_search_url)
+    tmdb_search_url = f"https://api.themoviedb.org/3/search/movie?api_key={settings.TMDB_API_KEY}&query={query}"
+    response = requests.get(tmdb_search_url)
     movies = response.json().get('results', []) if response.status_code == 200 else []
 
     return render(request, 'watchlist/search_results.html', {'movies': movies})
@@ -49,7 +49,7 @@ def view_watchlist(request):
     watchlist = Watchlist.objects.filter(user=request.user)
     for entry in watchlist:
         tmdb_movie_url = f"https://api.themoviedb.org/3/movie/{entry.movie.tmdb_id}?api_key={settings.TMDB_API_KEY}"
-        response = request.get(tmdb_movie_url) 
+        response = requests.get(tmdb_movie_url) 
 
         if response.status_code == 200:
             data = response.json()

@@ -1,0 +1,23 @@
+{% extends "core/base.html" %}
+
+{% block title %}
+Search Results
+{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <h1 class="mb-4">Search Results</h1>
+    <div class="grid grid-cols-4 gap-6">
+        {% for movie in movies %}
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <img class="w-full h-96 object-cover" src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}"
+                alt="{{movie.title}}">
+            <div class="p-2">
+                <h2 class="text-xl font-semibold my-3">{{movie.title}}</h2>
+                <p class="">Release Date: {{movie.release_date}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
