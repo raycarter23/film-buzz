@@ -12,7 +12,7 @@ My Watchlist
             <i class="fas fa-search text-white"></i>
         </button>
     </form>
-    <h1 class="text-2xl text-center py-4">{{request.user.first_name}}'s Watchlist</h1>
+    <h1 class="text-2xl text-center py-4">{{request.user.first_name}}'s Watchlist ({{watchlist|length}})</h1>
     <div class="grid grid-cols-4 gap-6">
         {% for entry in watchlist %}
         <div class="bg-white shadow-md rounded-lg overflow-hidden">
