@@ -43,6 +43,7 @@ class Watchlist(models.Model):
             # Generate a unique slug dynamically
             base_slug = slugify(f"{self.user.username}-{self.movie.title}")
             slug = base_slug
+            
 
             self.slug = slug
         super().save(*args, **kwargs)
