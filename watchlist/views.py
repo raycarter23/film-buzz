@@ -29,7 +29,7 @@ def add_to_watchlist(request, movie_id):
     else:
         return redirect('watchlist')
     
-    watchlist = Watchlist.objects.get_or_create(user=request.user, movie='movie')
+    watchlist = Watchlist.objects.get_or_create(user=request.user, movie=movie)
     if watchlist:
         watchlist.save()
 

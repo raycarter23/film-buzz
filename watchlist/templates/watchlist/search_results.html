@@ -12,9 +12,12 @@ Search Results
         <div class="bg-white shadow-md rounded-lg overflow-hidden">
             <img class="w-full h-96 object-cover" src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}"
                 alt="{{movie.title}}">
-            <div class="p-2">
-                <h2 class="text-xl font-semibold my-3">{{movie.title}}</h2>
+            <div class="flex flex-col gap-2 p-4">
+                <h2 class="text-xl font-semibold">{{movie.title}}</h2>
                 <p class="">Release Date: {{movie.release_date}}</p>
+                <a class="bg-[#294e79] px-4 py-1 rounded text-white text-center"
+                    href="{% url 'add_to_watchlist' movie.id %}">Add to
+                    Watchlist</a>
             </div>
         </div>
         {% endfor %}

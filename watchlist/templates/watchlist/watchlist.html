@@ -12,5 +12,16 @@ My Watchlist
             <i class="fas fa-search text-white"></i>
         </button>
     </form>
+    <div class="grid grid-cols-4 gap-6">
+        {% for entry in watchlist %}
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <img class="w-full h-96 object-cover" src="{{entry.movie.poster}}" alt="{{entry.movie.title}}">
+            <div class="flex flex-col gap-2 p-4">
+                <h2 class="text-xl font-semibold">{{entry.movie.title}}</h2>
+                <p class="">Release Date: {{entry.movie.release_date}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}
