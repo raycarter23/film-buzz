@@ -1,0 +1,16 @@
+{% extends "core/base.html" %}
+
+{% block title %}
+My Watchlist
+{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <form method="get" action="{% url 'search_movies' %}" class="">
+        <input type="text" name="query" placeholder="Search for Movies..." class="p-2 rounded border">
+        <button type="submit" class="bg-[#294e79] p-2 rounded">
+            <i class="fas fa-search text-white"></i>
+        </button>
+    </form>
+</div>
+{% endblock %}
