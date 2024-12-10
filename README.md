@@ -9,7 +9,7 @@ The aim of this project was to create a site that provides an engaging space for
 
 Developed by **Ray Carter**
 
-View live site here: [Film Buzz website](https://film-buzz-374754df9761.herokuapp.com/)
+View live site here: [Film Buzz website](https://film-buzz-3729799f06ec.herokuapp.com/)
 
 ------
 
