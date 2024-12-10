@@ -59,4 +59,11 @@ def view_watchlist(request):
 
     return render(request, 'watchlist/watchlist.html', {'watchlist': watchlist})
 
+@login_required
+def remove_from_watchlist(request, movie_id):
+    movie = get_object_or_404(Movie, id=movie_id)
+    entry = get_object_or_404(Watchlist, user=request.user, movie=movie)
+    entry.delete()
+
+    return redirect('watchlist')
 

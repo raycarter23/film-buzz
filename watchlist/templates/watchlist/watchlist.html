@@ -19,8 +19,14 @@ My Watchlist
             <img class="w-full h-96 object-cover" src="{{entry.movie.poster}}" alt="{{entry.movie.title}}">
             <div class="flex flex-col gap-2 p-4">
                 <h2 class="text-xl font-semibold">{{entry.movie.title}}</h2>
-                <p class="">Release Date: {{entry.movie.release_date}}</p>
+                <div class="flex justify-between items-center">
+                    <p class="">Release Date: {{entry.movie.release_date}}</p>
+                    <a href="{% url 'remove_from_watchlist' entry.movie.id %}"
+                        class="bg-red-500 px-2 py-1 rounded text-white text-center"><i class="fa-solid fa-trash"></i>
+                    </a>
+                </div>
             </div>
+
         </div>
         {% endfor %}
     </div>
