@@ -19,12 +19,14 @@ from django.conf.urls.static import static
 from django.conf import settings
 from django.urls import path, include
 from core.views import home, about, signup
+from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('about/', about, name='about'),
     path('watchlist/', include('watchlist.urls')),
     path('signup/', signup, name='signup'),
+    path('logout/', LogoutView.as_view(), name='logout'),
     path('blog/', include('blog.urls')),
     path('', home, name='home'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
