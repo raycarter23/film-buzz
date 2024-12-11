@@ -1,23 +1,46 @@
-{% extends "core/base.html" %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block title %}
-Sign Up to Film Buzz
-{% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        textarea,
+        input {
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+    </style>
+</head>
 
-{% block content %}
-<div class="container mx-auto px-4 py-8">
-    <img class="h-14"
-        src="https://raw.githubusercontent.com/raycarter23/film-buzz/refs/heads/main/documentation/images/logo.png"
-        alt="Film Buzz Logo">
-    <p>It only takes a minute to join Film Buzz!</p>
-    <p>Fill in the form below to get started.</p>
-    <h2 class="text-[#294E79]">Create a new account</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{form.as_p}}
-        <button type="submit">
-            Sign Up
-        </button>
-    </form>
-</div>
-{% endblock %}
+<body>
+    <div class="w-full flex gap-12">
+        <div class="h-screen w-3/5">
+            <img src="https://res.cloudinary.com/dxqfzsh70/image/upload/v1733950181/image_14_yoovm9.png"
+                alt="Movie Poster">
+        </div>
+        <div class="flex flex-col justify-center px-4 py-8 w-2/5">
+            <div class="mb-8">
+                <a href="{% url 'home' %}"><img class="h-14"
+                        src="https://raw.githubusercontent.com/raycarter23/film-buzz/refs/heads/main/documentation/images/logo.png"
+                        alt="Film Buzz Logo"></a>
+                <p>It only takes a minute to join Film Buzz!</p>
+                <p>Fill in the form below to get started.</p>
+            </div>
+            <h2 class="text-[#294E79] font-bold text-3xl mb-6">Create a new account</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{form|crispy}}
+                <button type="submit" class="bg-[#294E79] text-white text-sm rounded px-16 py-2 mt-4">
+                    Sign Up
+                </button>
+            </form>
+            <a href="{% url 'login' %}" class="text-[#294E79] underline pt-8">Already have an account?</a>
+        </div>
+    </div>
+</body>
+
+</html>
