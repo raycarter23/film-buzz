@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
 from django.urls import path, include
-from core.views import home, about, signup
+from core.views import home, about, signup, signin
 from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
@@ -26,6 +26,7 @@ urlpatterns = [
     path('about/', about, name='about'),
     path('watchlist/', include('watchlist.urls')),
     path('signup/', signup, name='signup'),
+    path('login/', signin, name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
     path('blog/', include('blog.urls')),
     path('', home, name='home'),

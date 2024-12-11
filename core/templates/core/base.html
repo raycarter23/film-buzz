@@ -35,8 +35,12 @@
                     <a href="{% url 'logout' %}" class="bg-red-500 text-white px-2 py-1 rounded-lg">Logout</a>
                 </div>
                 {% else %}
-                <div class="px-5">
-                    <a href="{% url 'signup' %}" class="bg-blue-800 text-white px-2 py-1 rounded-lg">Sign Up</a>
+
+                <div class="flex gap-4 px-5">
+                    <a href="{% url 'login' %}" class="bg-[#294E79] text-white text-sm rounded-lg px-2 py-1">
+                        Login
+                    </a>
+                    <a href="{% url 'signup' %}" class="bg-blue-800 text-white text-sm px-2 py-1 rounded-lg">Sign Up</a>
                 </div>
                 {% endif %}
                 <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search"

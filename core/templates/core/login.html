@@ -1,7 +1,7 @@
 {% extends "core/base.html" %}
 
 {% block title %}
-Sign Up to Film Buzz
+Login to Film Buzz
 {% endblock %}
 
 {% block content %}
@@ -9,15 +9,15 @@ Sign Up to Film Buzz
     <img class="h-14"
         src="https://raw.githubusercontent.com/raycarter23/film-buzz/refs/heads/main/documentation/images/logo.png"
         alt="Film Buzz Logo">
-    <p>It only takes a minute to join Film Buzz!</p>
-    <p>Fill in the form below to get started.</p>
-    <h2 class="text-[#294E79]">Create a new account</h2>
+    <p>Welcome Back to Film Buzz</p>
+    <h2>Log in to your account</h2>
     <form method="post">
         {% csrf_token %}
         {{form.as_p}}
-        <button type="submit">
-            Sign Up
+        <button type="submit" class="bg-[#294E79] text-white rounded-lg">
+            Sign In
         </button>
+        <p>Don't have an account?</p>
     </form>
 </div>
 {% endblock %}
