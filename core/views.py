@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import *
 from django.contrib.auth import authenticate, login, logout
 
@@ -18,7 +18,7 @@ def signup(request):
             user = form.save()
 
             # get the raw password
-            raw_password = form.cleaned_data('password1')
+            raw_password = form.cleaned_data['password1']
 
             # authenticate the user
             user = authenticate(username=user.username, password=raw_password)
