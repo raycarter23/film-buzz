@@ -30,13 +30,16 @@
             </a>
             <div class="flex items-center md:order-2">
                 {% if user.is_authenticated %}
-                <div class="flex gap-4 px-5">
+                <div class="flex items-center gap-4 px-5">
                     <span>Hi, {{user.first_name}}!</span>
-                    <a href="{% url 'logout' %}" class="bg-red-500 text-white px-2 py-1 rounded-lg">Logout</a>
+                    <a href="{% url 'profile' %}" class="bg-[#294E79] text-white text-sm rounded-lg px-2 py-1">
+                        Profile
+                    </a>
+                    <a href="{% url 'logout' %}" class="bg-red-500 text-white text-sm px-2 py-1 rounded-lg">Logout</a>
                 </div>
                 {% else %}
 
-                <div class="flex gap-4 px-5">
+                <div class="flex items-center gap-4 px-5">
                     <a href="{% url 'login' %}" class="bg-[#294E79] text-white text-sm rounded-lg px-2 py-1">
                         Login
                     </a>
