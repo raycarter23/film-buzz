@@ -1,0 +1,22 @@
+{% extends "core/base.html" %}
+
+{% block title %}
+Profile
+{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <h1>My Profile</h1>
+    <div>
+        <img src="{{profile.profile_picture.url}}" alt="Profile Picture">
+        <p>Username: {{user.username}}</p>
+        <p>Name: {{user.get_full_name()}}</p>
+        <p>Email: {{user.email}}</p>
+        <p>Bio: {{profile.bio}}</p>
+        <p>Location: {{profile.location}}</p>
+        <p>Birthdate: {{profile.birth_date}}</p>
+        <p>Date Joined: {{user.date_joined}}</p>
+    </div>
+    <a href="{% url 'edit_profile' %}" class="bg-[#294E79] text-white text-sm rounded px-16 py-2 mt-4">Edit Profile</a>
+</div>
+{% endblock %}
