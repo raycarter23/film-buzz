@@ -6,16 +6,19 @@ Profile
 
 {% block content %}
 <div class="container mx-auto px-4 py-8">
-    <h1>My Profile</h1>
-    <div>
-        <img src="{{profile.profile_picture.url}}" alt="Profile Picture">
-        <p>Username: {{user.username}}</p>
-        <p>Name: {{user.get_full_name()}}</p>
-        <p>Email: {{user.email}}</p>
-        <p>Bio: {{profile.bio}}</p>
-        <p>Location: {{profile.location}}</p>
-        <p>Birthdate: {{profile.birth_date}}</p>
-        <p>Date Joined: {{user.date_joined}}</p>
+    <h1 class="text-2xl text-[#294E79] mb-2 font-semibold">My Profile</h1>
+    <hr>
+    <div class="py-4 flex flex-col gap-4">
+        <div>
+            <img src="{{profile.profile_picture.url}}" alt="Profile Picture" class="h-[160px] rounded-lg shadow-md">
+        </div>
+        <p><span class="font-semibold">Username:</span> {{profile.user.username}}</p>
+        <p><span class="font-semibold">Name:</span> {{profile.user.get_full_name}}</p>
+        <p><span class="font-semibold">Email:</span> {{profile.user.email}}</p>
+        <p><span class="font-semibold">Bio:</span> {{profile.bio}}</p>
+        <p><span class="font-semibold">Location:</span> {{profile.location}}</p>
+        <p><span class="font-semibold">Birthdate:</span> {{profile.birth_date}}</p>
+        <p><span class="font-semibold">Date Joined:</span> {{profile.user.date_joined}}</p>
     </div>
     <a href="{% url 'edit_profile' %}" class="bg-[#294E79] text-white text-sm rounded px-16 py-2 mt-4">Edit Profile</a>
 </div>
