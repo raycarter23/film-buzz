@@ -7,7 +7,7 @@ from django.core.paginator import Paginator
 # Create your views here.
 
 def blog(request):
-    all_posts = Post.objects.all()
+    all_posts = Post.objects.all().order_by('-created_at')
     featured_post = all_posts.first()
     paginator = Paginator(all_posts[1:],6)
     page_number = request.GET.get('page')
