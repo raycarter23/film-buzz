@@ -9,7 +9,7 @@ from django.core.paginator import Paginator
 def blog(request):
     all_posts = Post.objects.all()
     featured_post = all_posts.first()
-    paginator = Paginator(all_posts[1:],8)
+    paginator = Paginator(all_posts[1:],6)
     page_number = request.GET.get('page')
     posts = paginator.get_page(page_number)
     return render(request, 'blog/blog.html',{'posts':posts, 'featured_post':featured_post})
