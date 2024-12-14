@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = "vr_m=a&1c)1lhmsya5o$vv7355n3b7g#-rtvz*p+2mbm8d4_(k"
 
 # TMDb API Key
 TMDB_API_KEY = os.getenv('TMDB_API_KEY')
@@ -37,7 +37,7 @@ TMDB_API_KEY = os.getenv('TMDB_API_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['8000-raycarter23-filmbuzz-5kwcihbyszf.ws.codeinstitute-ide.net', 'film-buzz-3729799f06ec.herokuapp.com', '127.0.0.1']
 
 CSRF_TRUSTED_ORIGINS = ["https://*.codeinstitute-ide.net", "https://*.herokuapp.com"]
 
