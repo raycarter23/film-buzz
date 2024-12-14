@@ -25,5 +25,16 @@ Blog
         </a>
         {% endfor %}
     </div>
+    <div class="flex justify-center items-center py-12 gap-4">
+        {% if posts.has_previous %}
+        <a class="bg-[#294E79] text-white px-2 py-1 rounded" href="?page=1">&laquo;</a>
+        <a class="bg-[#294E79] text-white px-2 py-1 rounded" href="?page={{posts.previous_page_number}}">Prev</a>
+        {% endif %}
+        <span class="text-[#294E79] font-semibold">Page {{posts.number}} of {{posts.paginator.num_pages}}</span>
+        {% if posts.has_next %}
+        <a class="bg-[#294E79] text-white px-2 py-1 rounded" href="?page={{posts.next_page_number}}">Next</a>
+        <a class="bg-[#294E79] text-white px-2 py-1 rounded" href="?page={{posts.paginator.num_pages}}">&raquo;</a>
+        {% endif %}
+    </div>
 </div>
 {% endblock %}

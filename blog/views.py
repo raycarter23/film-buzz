@@ -2,12 +2,17 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Post, Comment, Category
 from .forms import CommentForm
 from django.db.models import Q
+from django.core.paginator import Paginator
 
 # Create your views here.
 
 def blog(request):
-    posts = Post.objects.all()
-    return render(request, 'blog/blog.html',{'posts':posts})
+    all_posts = Post.objects.all()
+    featured_post = all_posts.first()
+    paginator = Paginator(all_posts[1:],8)
+    page_number = request.GET.get('page')
+    posts = paginator.get_page(page_number)
+    return render(request, 'blog/blog.html',{'posts':posts, 'featured_post':featured_post})
 
 def details(request, category_slug, slug):
     post = get_object_or_404(Post, slug=slug)
