@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.text import slugify
+from django_ckeditor_5.fields import CKEditor5Field 
 
 # Create your models here.
 class Category(models.Model):
@@ -35,7 +36,7 @@ class Post(models.Model):
     """
     title = models.CharField(max_length=255)
     slug = models.SlugField(default='')
-    content = models.TextField()
+    content = CKEditor5Field('Content', config_name='extends')
     created_at = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, related_name='posts', on_delete=models.CASCADE)

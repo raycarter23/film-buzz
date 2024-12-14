@@ -46,6 +46,6 @@ def create_post(request):
             return redirect('blog')
         
     else:
-        form = PostForm
+        form = PostForm()
     return render(request, 'blog/create_post.html', {'form': form})
 
