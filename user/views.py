@@ -2,8 +2,10 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from .models import UserProfile
 from .forms import UserProfileForm
+from blog.forms import PostForm
 from blog.models import Post
 from django.core.paginator import Paginator
+from blog.views import blog
 
 # Create your views here.
 
@@ -16,14 +18,6 @@ def view_profile(request):
     user_posts = paginator.get_page(page_number)
 
     return render(request,'user/profile.html', {'profile': profile, 'user_posts': user_posts})
-
-# def blog(request):
-#     all_posts = Post.objects.all()
-#     featured_post = all_posts.first()
-#     paginator = Paginator(all_posts[1:],6)
-#     page_number = request.GET.get('page')
-#     posts = paginator.get_page(page_number)
-#     return render(request, 'blog/blog.html',{'posts':posts, 'featured_post':featured_post})
 
 @login_required
 def edit_profile(request):
@@ -39,4 +33,19 @@ def edit_profile(request):
     else:
         form = UserProfileForm(instance=profile)
     return render(request, 'user/edit_profile.html', {'form': form})
+
+@login_required
+def create_post(request):
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES)
+
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.save()
+            return redirect('blog')
+        
+    else:
+        form = PostForm
+    return render(request, 'user/create_post.html', {'form': form})
 
