@@ -18,4 +18,31 @@ Home
         Get Started
     </a>
 </section>
+{% if trending_posts|length > 0 %}
+<section class="max-w-screen-xl mx-auto p-4 mt-10">
+    <h2 class="text-center text-3xl font-bold mb-8 text-[#294E79]">Trending Posts</h2>
+    <div class="grid grid-cols-2 gap-6">
+        <div class="">
+            <a href="" class="shadow-md">
+                <img src="{{trending_posts.0.image.url}}" alt="First Post"
+                    class="w-full h-[420px] object-cover  top-0 left-0">
+                <h3 class="text-2xl font-semibold text-white  bottom-2 left-4">{{trending_posts.0.title}}</h3>
+            </a>
+        </div>
+
+        <div class="grid grid-row-2 gap-4">
+            <a href="" class="shadow-md">
+                <img src="{{trending_posts.1.image.url}}" alt="Second Post"
+                    class="w-full h-[190px] object-cover  top-0 left-0">
+                <h3 class="text-2xl font-semibold text-white  bottom-2 left-4">{{trending_posts.1.title}}</h3>
+            </a>
+            <a href="" class="shadow-md">
+                <img src="{{trending_posts.2.image.url}}" alt="Third Post"
+                    class="w-full h-[190px] object-cover  top-0 left-0">
+                <h3 class="text-2xl font-semibold text-white  bottom-2 left-4">{{trending_posts.2.title}}</h3>
+            </a>
+        </div>
+    </div>
+</section>
+{% endif %}
 {% endblock %}
