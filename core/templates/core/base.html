@@ -17,6 +17,9 @@
             border-radius: 5px;
         }
     </style>
+    {% block extra_css %}
+    {{form.media.css}}
+    {% endblock %}
 </head>
 
 <body>
@@ -218,7 +221,9 @@
             </div>
         </div>
     </footer>
-
+    {% block extra_js %}
+    {{form.media.js}}
+    {% endblock %}
 </body>
 
 </html>

@@ -264,4 +264,6 @@ CKEDITOR_5_CONFIGS = {
     }
 }
 
+CKEDITOR_5_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 CKEDITOR_5_FILE_UPLOAD_PERMISSION = "any"
