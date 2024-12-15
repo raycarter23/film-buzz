@@ -22,24 +22,29 @@ Home
 <section class="max-w-screen-xl mx-auto p-4 mt-10">
     <h2 class="text-center text-3xl font-bold mb-8 text-[#294E79]">Trending Posts</h2>
     <div class="grid grid-cols-2 gap-6">
-        <div class="">
-            <a href="" class="shadow-md">
-                <img src="{{trending_posts.0.image.url}}" alt="First Post"
-                    class="w-full h-[420px] object-cover  top-0 left-0">
-                <h3 class="text-2xl font-semibold text-white  bottom-2 left-4">{{trending_posts.0.title}}</h3>
+        <div class="shadow-lg h-[400px]">
+            <a href="{% url 'details' trending_posts.0.category.slug trending_posts.0.slug %}" class="relative">
+                <img src="{{trending_posts.0.image.url}}" alt="First Post" class="w-full h-full object-cover">
+                <div class="bg-black/30 w-full h-[400px] absolute top-0 left-0 pointer-events-none"></div>
+                <h3 class="text-4xl drop-shadow font-semibold text-white absolute bottom-2 left-4">
+                    {{trending_posts.0.title}}</h3>
             </a>
         </div>
 
         <div class="grid grid-row-2 gap-4">
-            <a href="" class="shadow-md">
-                <img src="{{trending_posts.1.image.url}}" alt="Second Post"
-                    class="w-full h-[190px] object-cover  top-0 left-0">
-                <h3 class="text-2xl font-semibold text-white  bottom-2 left-4">{{trending_posts.1.title}}</h3>
+            <a href="{% url 'details' trending_posts.1.category.slug trending_posts.1.slug %}"
+                class="shadow-lg h-[192px] relative">
+                <img src="{{trending_posts.1.image.url}}" alt="Second Post" class="w-full h-[190px] object-cover">
+                <div class="bg-black/30 w-full h-[190px] absolute top-0 left-0 pointer-events-none"></div>
+                <h3 class="text-2xl drop-shadow font-semibold text-white absolute bottom-2 left-4 ">
+                    {{trending_posts.1.title}}</h3>
             </a>
-            <a href="" class="shadow-md">
-                <img src="{{trending_posts.2.image.url}}" alt="Third Post"
-                    class="w-full h-[190px] object-cover  top-0 left-0">
-                <h3 class="text-2xl font-semibold text-white  bottom-2 left-4">{{trending_posts.2.title}}</h3>
+            <a href="{% url 'details' trending_posts.2.category.slug trending_posts.2.slug %}"
+                class="shadow-lg h-[192px] relative">
+                <img src="{{trending_posts.2.image.url}}" alt="Third Post" class="w-full h-[190px] object-cover ">
+                <div class="bg-black/30 w-full h-[190px] absolute top-0 left-0 pointer-events-none"></div>
+                <h3 class="text-2xl drop-shadow font-semibold text-white absolute bottom-2 left-4 bg-[gray-800] p-2">
+                    {{trending_posts.2.title}}</h3>
             </a>
         </div>
     </div>
