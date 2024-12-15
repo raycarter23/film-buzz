@@ -1,0 +1,22 @@
+{% extends "core/base.html" %}
+
+{% block title %}
+Delete Posts
+{% endblock %}
+
+{% block content %}
+<div class="container mx-auto p-4">
+    <h1 class="text-[#294E79] font-bold text-3xl mb-6">Delete Posts</h1>
+    <p class="text-[#ef4444] font-semibold">Are you sure you want to delete this post?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="bg-[#ef4444] text-white text-sm rounded px-16 py-2 mt-4">
+            Delete
+        </button>
+        <a href="{% url 'details' post.category.slug post.slug %}"
+            class="bg-[#175241] text-white text-sm rounded px-16 py-2 mt-4">
+            Cancel
+        </a>
+    </form>
+</div>
+{% endblock %}
