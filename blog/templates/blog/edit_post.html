@@ -1,0 +1,19 @@
+{% extends "core/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+Edit Posts
+{% endblock %}
+
+{% block content %}
+<div class="container mx-auto p-4">
+    <h1 class="text-[#294E79] font-bold text-3xl mb-6">Edit Posts</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form|crispy}}
+        <button type="submit" class="bg-[#294E79] text-white text-sm rounded px-16 py-2 mt-4">
+            Submit
+        </button>
+    </form>
+</div>
+{% endblock %}
