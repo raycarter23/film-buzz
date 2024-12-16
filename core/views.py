@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import *
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm
-from blog.models import Post
+from blog.models import Post, Category
 from django.db.models import Count
 
 # Create your views here.
@@ -10,7 +10,8 @@ from django.db.models import Count
 def home(request):
     trending_posts = Post.objects.annotate(comment_count=Count('comments')).order_by('-comment_count')[:3]
     latest_posts = Post.objects.all().order_by('-created_at')[:4]
-    return render(request, 'core/home.html', {'trending_posts':trending_posts, 'latest_posts':latest_posts})
+    categories = Category.objects.all()
+    return render(request, 'core/home.html', {'trending_posts':trending_posts, 'latest_posts':latest_posts, 'categories':categories})
 
 def about(request):
     return render(request, 'core/about.html')
