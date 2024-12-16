@@ -9,7 +9,8 @@ from django.db.models import Count
 
 def home(request):
     trending_posts = Post.objects.annotate(comment_count=Count('comments')).order_by('-comment_count')[:3]
-    return render(request, 'core/home.html', {'trending_posts':trending_posts})
+    latest_posts = Post.objects.all().order_by('-created_at')[:4]
+    return render(request, 'core/home.html', {'trending_posts':trending_posts, 'latest_posts':latest_posts})
 
 def about(request):
     return render(request, 'core/about.html')

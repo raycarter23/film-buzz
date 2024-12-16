@@ -50,4 +50,30 @@ Home
     </div>
 </section>
 {% endif %}
+{% if latest_posts|length > 0 %}
+<section class="max-w-screen-xl mx-auto p-4 mt-10">
+
+    <h2 class="text-center text-3xl font-bold mb-8 text-[#294E79]">Latest Posts</h2>
+    <div class="w-full grid grid-cols-4 gap-40">
+        <div class="grid grid-cols-1 gap-8 col-span-3">
+            {% for post in latest_posts %}
+            <a href="{% url 'details' post.category.slug post.slug %}" class="grid grid-cols-3 gap-6">
+                <img src="{{post.image.url}}" alt="{{post.title}}" class="col-span-1 h-[200px] object-cover rounded-md">
+                <div class="col-span-2">
+                    <h2 class="font-semibold text-2xl mb-4">{{post.title}}</h2>
+                    <p class="text-sm">{{post.content|slice:"0:400"|safe}} ...</p>
+                </div>
+
+            </a>
+            {% endfor %}
+            <div class="w-full flex justify-end">
+                <a href="{% url 'blog' %}" class="bg-[#294E79] text-white rounded px-4 py-2">Explore More</a>
+            </div>
+        </div>
+        <div class="col-span-1">
+            <h2>Categories</h2>
+        </div>
+    </div>
+</section>
+{% endif %}
 {% endblock %}
