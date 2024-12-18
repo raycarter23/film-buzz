@@ -5,5 +5,122 @@ About
 {% endblock %}
 
 {% block content %}
-<h1>About Film Buzz</h1>
+<main class="mx-auto max-w-screen-xl px-4 py-8">
+    <section>
+        <h1 class="text-center font-bold text-3xl mb-12 text-[#294E79]">About Film Buzz</h1>
+        <div class="grid grid-cols-2 gap-8 justify-center items-center">
+            <img src="https://res.cloudinary.com/dxqfzsh70/image/upload/v1734286236/martin-scorsese-ny-times_tfbqmr.webp"
+                alt="Martin Scorsese image" class="w-full h-[600px] object-cover rounded-lg">
+            <div class="flex flex-col gap-24">
+                <p class="text-2xl text-center">“Movies touch our hearts and awaken our vision, and change the way we
+                    see things.”<br>
+                    - <span class="text-[#294E79] font-semibold">Martin Scorsese</span></p>
+                <p>At <span class="font-semibold">Film Buzz</span>, we believe movies are more than entertainment –
+                    they’re stories that inspire, connect,
+                    and spark conversation. Our platform is designed to empower movie enthusiasts and aspiring critics
+                    to share their insights, discover new favorites, and connect with like-minded film lovers. Whether
+                    you’re writing thoughtful reviews, creating personalized watchlists, or exploring trending blog
+                    posts, Film Buzz provides a purposeful space to celebrate cinema and amplify your voice. Join us as
+                    we bring storytelling to life, one film at a time.</p>
+            </div>
+        </div>
+    </section>
+    <section class="py-20">
+        <h2 class="font-bold text-2xl mb-8 text-[#294E79]">Vision</h2>
+        <p class="mb-6">At Film Buzz, our vision is to create a dynamic and inclusive community-driven hub where movie
+            lovers, critics, and casual viewers come together to celebrate the timeless magic of cinema. We believe in
+            the power of movies to inspire, connect, and ignite imaginations across generations and cultures. Through
+            thoughtful storytelling and rich cinematic experiences, our platform empowers users to share their unique
+            perspectives, celebrate their favorite films, and uncover new ones that entertain, challenge, and resonate.
+            Film Buzz is more than just a movie site — it’s a space where voices are heard, conversations are sparked,
+            and stories are brought to life.</p>
+        <p>By combining cutting-edge technology, user-driven content, and a shared passion for film, we aim to build a
+            platform where movie lovers can explore cinema in engaging and meaningful ways. Film Buzz is your ultimate
+            space for discovering honest, insightful reviews, uncovering hidden gems, and celebrating the works of both
+            legendary and emerging filmmakers. From deep dives into classic masterpieces to thoughtful takes on the
+            latest blockbusters and indie films, our community is driven by authentic voices who live and breathe
+            movies.</p>
+    </section>
+    <section class="pb-10">
+        <h2 class="font-bold text-2xl mb-8 text-[#294E79]">Fun Movie Trivia</h2>
+        <ul>
+            <li>The shortest Oscar speech ever was just two words! When actress Patty Duke won Best Supporting Actress
+                in 1963, she simply said, “Thank you.”</li>
+            <li>Popcorn and movies weren’t always a pair – theaters initially banned snacks to avoid messy floors. Now,
+                popcorn is the ultimate movie-time treat!</li>
+            <li>The iconic ghost noises in “The Grudge” were made by the film's director, Takashi Shimizu, who performed
+                them himself for authenticity.</li>
+            <li>The MGM lion roar? It wasn’t recorded in a jungle. It was captured in a studio with a very brave sound
+                technician nearby.</li>
+            <li>Tom Hanks didn’t get paid for “Forrest Gump” – instead, he opted for a percentage of the film's
+                earnings. This decision earned him over $60 million!</li>
+            <li>The tiger in “Life of Pi” wasn’t all CGI. Four real Bengal tigers were used for specific close-up shots,
+                combined seamlessly with visual effects.</li>
+            <li>“The Matrix” code you see on-screen? It’s actually sushi recipes scanned from a Japanese cookbook!</li>
+            <li>Buzz Lightyear’s name in Toy Story is a tribute to real-life astronaut Buzz Aldrin, the second person to
+                walk on the moon.</li>
+            <li>Spider-Man’s famous upside-down kiss was harder than it looked – Tobey Maguire could barely breathe with
+                rainwater pouring into his nose!</li>
+            <li>The shark in “Jaws” was so fake-looking, the crew nicknamed it “Bruce.” Despite its flaws, the suspense
+                made it one of the most terrifying movies ever!</li>
+        </ul>
+    </section>
+    <section>
+        <h2 class="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+            <div class="border border-gray-200 rounded-lg">
+                <button type="button"
+                    class="w-full flex justify-between items-center text-left px-4 py-2 bg-gray-100 rounded-t-lg focus:outline-none"
+                    onclick="toggleAccordion('faq1')">
+                    <span>What is Film Buzz?</span>
+                    <i id="icon-faq1" class="fas fa-chevron-down"></i>
+                </button>
+                <div id="faq1" class="hidden px-4 py-2 transition-all duration-300 ease-in-out">
+                    Film Buzz is your go-to platform for movie lovers to discover, discuss, and share their favorite
+                    films.
+                </div>
+            </div>
+            <div class="border border-gray-200 rounded-lg">
+                <button type="button"
+                    class="w-full flex justify-between items-center text-left px-4 py-2 bg-gray-100 rounded-t-lg focus:outline-none"
+                    onclick="toggleAccordion('faq2')">
+                    <span>How can I create a watchlist?</span>
+                    <i id="icon-faq2" class="fas fa-chevron-down"></i>
+                </button>
+                <div id="faq2" class="hidden px-4 py-2 transition-all duration-300 ease-in-out">
+                    You can create a watchlist by signing up and navigating to the watchlist section in your profile.
+                </div>
+            </div>
+            <div class="border border-gray-200 rounded-lg">
+                <button type="button"
+                    class="w-full flex justify-between items-center text-left px-4 py-2 bg-gray-100 rounded-t-lg focus:outline-none"
+                    onclick="toggleAccordion('faq3')">
+                    <span>How do I contribute to the blog?</span>
+                    <i id="icon-faq3" class="fas fa-chevron-down"></i>
+                </button>
+                <div id="faq3" class="hidden px-4 py-2 transition-all duration-300 ease-in-out">
+                    To contribute to the blog, you need to be a registered user. Once registered, you can submit your
+                    blog posts for review.
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script>
+    function toggleAccordion(id) {
+        var element = document.getElementById(id);
+        var icon = document.getElementById('icon-' + id);
+        if (element.classList.contains('hidden')) {
+            element.classList.remove('hidden');
+            element.classList.add('block');
+            icon.classList.remove('fa-chevron-down');
+            icon.classList.add('fa-chevron-up');
+        } else {
+            element.classList.remove('block');
+            element.classList.add('hidden');
+            icon.classList.remove('fa-chevron-up');
+            icon.classList.add('fa-chevron-down');
+        }
+    }
+</script>
 {% endblock %}
