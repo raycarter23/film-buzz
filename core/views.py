@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import *
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm
-from blog.models import Post, Category
+from blog.models import Post, Category, Comment
 from django.db.models import Count
 
 # Create your views here.
@@ -11,7 +11,8 @@ def home(request):
     trending_posts = Post.objects.annotate(comment_count=Count('comments')).order_by('-comment_count')[:3]
     latest_posts = Post.objects.all().order_by('-created_at')[:4]
     categories = Category.objects.all()
-    return render(request, 'core/home.html', {'trending_posts':trending_posts, 'latest_posts':latest_posts, 'categories':categories})
+    recent_comments = Comment.objects.all().order_by('-created_at')[:3]
+    return render(request, 'core/home.html', {'trending_posts':trending_posts, 'latest_posts':latest_posts, 'categories':categories, 'recent_comments':recent_comments})
 
 def about(request):
     return render(request, 'core/about.html')
@@ -53,4 +54,3 @@ def signin(request):
     else:
         form = AuthenticationForm()
     return render(request, 'core/login.html', {'form': form})
-        
