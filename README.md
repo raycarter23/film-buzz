@@ -45,6 +45,7 @@ View live site here: [Film Buzz website](https://film-buzz-3729799f06ec.herokuap
   - [GitHub Projects](#github-projects)
   - [GitHub Issues](#github-issues)
 - [Testing](#testing)
+  - [Fictional Users](#fictional-users)
 - [Deployment](#deployment)
   - [Connecting to GitHub](#connecting-to-github)
   - [Django Project Setup](#django-project-setup)
@@ -464,6 +465,33 @@ Here is what my GitHub issues looked like at the **end** of the development proc
 ## Testing 
 
 For detailed information on testing, please see the [TESTING.md](https://github.com/raycarter23/film-buzz/blob/main/TESTING.md) file.
+
+### Fictional Users
+
+For my website, I created a series of fictional characters to test the CRUD functionality of my website. The copy for the fictional users was generated through [ChatGPT](https://openai.com/index/chatgpt/), and the images were sourced through [Pexels](https://www.pexels.com/). All images are copyright-free and used for testing purposes only. These fictional users could also be used to test out future features which are yet to be implemented, such as the follow feature for example.
+
+Below is a list of 17 fictional users with unique first and second names that have been created to populate the Film Buzz website, and to test its CRUD functionalities. Each name reflects the user’s personality or film interests:
+
+| Name               | Username  | Description                                                  | Image Link                                                                                                                                           |
+|--------------------|-----------|--------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Samuel Rollins     | SamRolls  | A film school student obsessed with classic cinema and arthouse films. | [Link](https://www.pexels.com/photo/man-on-gray-shirt-portrait-91227/)                                                                                |
+| Raven Lancaster    | RavenL    | A horror aficionado who adores supernatural and psychological thrillers. | [Link](https://www.pexels.com/photo/woman-face-157661/)                                                                                              |
+| Andrea Roth        | AndyR     | Passionate about experimental cinema and foreign films.                 | [Link](https://www.pexels.com/photo/woman-wearing-orange-sweater-2613260/)                                                                           |
+| Peter Carter       | PeteC     | A blockbuster junkie who reviews every superhero and action-packed movie. | [Link](https://www.pexels.com/search/portrait%20man/)                                                                                               |
+| Rita Kingsley      | RitaK     | Loves romantic comedies and feel-good dramas.                          | [Link](https://www.pexels.com/photo/woman-wearing-coat-762020/)                                                                                      |
+| Ruby Harrington    | RubyH     | A vintage film lover who reviews Golden Age classics.                  | [Link](https://www.pexels.com/photo/young-woman-posing-against-stone-wall-in-sunlight-29715937/)                                                     |
+| Sophia Wells       | SophW     | A science fiction fan intrigued by futuristic and dystopian films.     | [Link](https://www.pexels.com/photo/a-woman-in-green-knit-sweater-7929741/)                                                                          |
+| Nicholas Bennett   | NickB     | A noir enthusiast captivated by gritty crime dramas.                   | [Link](https://www.pexels.com/search/portrait%20man/)                                                                                               |
+| Melody Foster      | MelF      | A musical lover who analyses music-driven films.                       | [Link](https://www.pexels.com/photo/smiling-woman-sitting-on-road-1966002/)                                                                          |
+| Maverick Callahan  | MavCall   | A contrarian who argues for underrated, low-budget gems.               | [Link](https://www.pexels.com/search/portrait%20man/)                                                                                               |
+| Stanley Price      | StanP     | A spoiler-free advocate who writes detailed yet spoiler-free reviews.  | [Link](https://www.pexels.com/search/portrait%20man/)                                                                                               |
+| Terrence Noble     | TerryN    | A trivia expert who loves testing others’ movie knowledge.             | [Link](https://www.pexels.com/search/portrait%20man/)                                                                                               |
+| Benjamin Holmes    | BenH      | A binge-watcher who reviews entire franchises at once.                 | [Link](https://www.pexels.com/search/portrait%20man/)                                                                                               |
+| Alexander Reed     | AlexR     | Focuses on animated films, from Pixar to Japanese anime.               | [Link](https://www.pexels.com/photo/young-barista-in-coffee-shop-work-environment-29647355/)                                                        |
+| Dylan Hayes        | DylanH    | A documentary enthusiast with a love for factual storytelling.         | [Link](https://www.pexels.com/photo/stylish-man-with-sunglasses-in-buenos-aires-29641946/)                                                          |
+| Ace Sullivan       | AceS      | An adrenaline junkie reviewing action films and stunts.                | [Link](https://www.pexels.com/search/smiling%20guy/)                                                                                                |
+| William Cooper     | WillC     | A weekend movie buff who enjoys casual reviewing.                      | [Link](https://www.pexels.com/search/portrait%20man/)                                                                                               |
+
 
 ## Deployment
 
