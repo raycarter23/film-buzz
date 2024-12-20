@@ -235,101 +235,105 @@ I used [Logo Design AI](https://logodesign.ai/) to generate the following logo d
 
 I used [Figma](https://www.figma.com/) to create low-fidelity and high-fidelity wireframes for my website. To follow best practices and aid with responsive design, wireframes were developed for **desktop**, **tablet** and **mobile** screen sizes.
 
+---
+
 ### Low-Fidelity Wireframes
 
 #### Home Page Wireframes
-
 <details>
 <summary>Click to view the Home Page Wireframes</summary>
 
-**Mobile**
+**Mobile**  
 ![Mobile - Home Page](/documentation/wireframes/low-fidelity/mobile-home.png)
 
-**Tablet**
+**Tablet**  
 ![Tablet - Home Page](/documentation/wireframes/low-fidelity/tablet-home.png)
 
-**Desktop**
+**Desktop**  
 ![Desktop - Home Page](/documentation/wireframes/low-fidelity/desktop%20-%20home.png)
+
 </details>
 
 #### About Page Wireframes
-
 <details>
 <summary>Click to view the About Page Wireframes</summary>
 
-**Mobile**
+**Mobile**  
 ![Mobile - About Page](/documentation/wireframes/low-fidelity/mobile-about.png)
 
-**Tablet**
+**Tablet**  
 ![Tablet - About Page](/documentation/wireframes/low-fidelity/tablet-about.png)
 
-**Desktop**
+**Desktop**  
 ![Desktop - About Page](/documentation/wireframes/low-fidelity/desktop-about.png)
+
 </details>
 
 #### Blogs Page Wireframes
-
 <details>
 <summary>Click to view the Blogs Page Wireframes</summary>
 
-**Mobile**
+**Mobile**  
 ![Mobile - Blogs Page](/documentation/wireframes/low-fidelity/mobile-blogs.png)
 
-**Tablet**
+**Tablet**  
 ![Tablet - Blogs Page](/documentation/wireframes/low-fidelity/tablet-blogs.png)
 
-**Desktop**
+**Desktop**  
 ![Desktop - Blogs Page](/documentation/wireframes/low-fidelity/desktop-blogs.png)
+
 </details>
+
+---
 
 ### High-Fidelity Wireframes
 
 #### Home Page Wireframes
-
 <details>
 <summary>Click to view the Home Page Wireframes</summary>
 
 ![Home Page - High Fidelity Wireframe](/documentation/wireframes/high-fidelity/home.png)
+
 </details>
 
 #### About Page Wireframes
-
 <details>
 <summary>Click to view the About Page Wireframes</summary>
 
 ![About Page - High Fidelity Wireframe](/documentation/wireframes/high-fidelity/about.png)
+
 </details>
 
 #### Blogs Page Wireframes
-
 <details>
 <summary>Click to view the Blogs Page Wireframes</summary>
 
 ![Blogs Page - High Fidelity Wireframe](/documentation/wireframes/high-fidelity/blogs.png)
+
 </details>
 
 #### Login Page Wireframes
-
 <details>
 <summary>Click to view the Login Page Wireframes</summary>
 
 ![Login Page - High Fidelity Wireframe](/documentation/wireframes/high-fidelity/login.png)
+
 </details>
 
 #### Signup Page Wireframes
-
 <details>
 <summary>Click to view the Signup Page Wireframes</summary>
 
 ![Signup Page - High Fidelity Wireframe](/documentation/wireframes/high-fidelity/signup.png)
+
 </details>
 
 #### Not Found Page Wireframes
-
 <details>
 <summary>Click to view the Not Found Page Wireframes</summary>
 
 ![Not Found Page - High Fidelity Wireframe](/documentation/wireframes/high-fidelity/not-found.png)
+
 </details>
 
 ## Features
