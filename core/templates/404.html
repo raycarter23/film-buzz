@@ -1,0 +1,25 @@
+{% extends "core/base.html" %}
+
+{% block title %}
+About
+{% endblock %}
+
+{% block content %}
+<main class="mx-auto max-w-screen-xl px-4 py-8 flex justify-center items-center gap-24">
+    <div>
+        <h1 class="text-[#294E79] text-2xl font-bold mb-6">Cut! That's not the scene we were <br> looking for</h1>
+        <p class="mb-8 text-sm">It seems like the page you’re searching for is missing from the <br> script. Maybe it’s
+            been
+            archived, deleted, or
+            never made it past the <br> cutting room floor.</p>
+        <a href="{% url 'home' %}"
+            class="bg-white text-[#294E79] rounded-lg px-2 py-2 border-2 border-solid border-[#294E79] text-sm">Back to
+            Home</a>
+    </div>
+    <div>
+        <img src="https://res.cloudinary.com/dxqfzsh70/image/upload/v1734713007/404-error-page_1_ylymdu.png"
+            alt="404 Not Found Image" class="h-[400px] w-[400px]">
+    </div>
+</main>
+
+{% endblock %}
