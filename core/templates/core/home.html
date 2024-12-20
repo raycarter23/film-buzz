@@ -21,7 +21,7 @@ Home
 {% if trending_posts|length > 0 %}
 <section class="max-w-screen-xl mx-auto p-4 mt-10">
     <h2 class="text-center text-3xl font-bold mb-12 text-[#294E79]">Trending Posts</h2>
-    <div class="grid grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="shadow-lg h-[400px]">
             <a href="{% url 'details' trending_posts.0.category.slug trending_posts.0.slug %}" class="relative">
                 <img src="{{trending_posts.0.image.url}}" alt="First Post" class="w-full h-full object-cover">
@@ -54,7 +54,7 @@ Home
 <section class="max-w-screen-xl mx-auto px-4 mt-10 pt-5 pb-12">
 
     <h2 class="text-center text-3xl font-bold mb-12 text-[#294E79]">Latest Posts</h2>
-    <div class="w-full grid grid-cols-4 gap-40">
+    <div class="w-full grid grid-cols-1 md:grid-cols-4 gap-40">
         <div class="grid grid-cols-1 gap-8 col-span-3">
             {% for post in latest_posts %}
             <a href="{% url 'details' post.category.slug post.slug %}" class="grid grid-cols-3 gap-6">
