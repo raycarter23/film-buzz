@@ -483,6 +483,16 @@ The Watchlist model represents a personalised list of movies that a user wants t
 
 ### MoSCoW Prioritisation
 
+For the Film Buzz project, I adopted a structured approach to managing features by breaking down larger Epics into smaller, actionable user stories. 
+
+This method allowed me to clearly define and prioritise each story using the [MoSCoW framework](https://www.agilebusiness.org/dsdm-project-framework/moscow-prioririsation.html), which was implemented in the [Issues](https://github.com/raycarter23/film-buzz/issues) tab with appropriate labels.
+
+- **Must Have**: Critical features that are essential for delivery - `comprising up to 60% of the total stories`
+- **Should Have**: Important features that add considerable value but are not critical for the core functionality - `accounting for about 20% of the stories`
+- **Could Have**: Optional features with a minor impact if excluded - `representing another 20%`
+- **Won't Have**: Low-priority features that are not included in the current iteration but may be revisited in the future 
+
+
 ### GitHub Projects 
 
 I used [GitHub Projects](https://github.com/users/raycarter23/projects/3) as an Agile tool to streamline the development process for this project.
@@ -519,6 +529,15 @@ Here is what my GitHub issues looked like at the **start** of the initial develo
 
 Here is what my GitHub issues looked like at the **end** of the development process:
 
+- [Open Issues](https://github.com/raycarter23/film-buzz/issues?q=is%3Aopen+is%3Aissue)
+
+![Open Issues](/documentation/agile-process/open-issues.png)
+
+- [Closed Issues](https://github.com/raycarter23/film-buzz/issues?q=is%3Aissue+is%3Aclosed)
+
+![Closed Issues - 1](/documentation/agile-process/closed-issues-1.png)
+
+![Closed Issues - 2](/documentation/agile-process/closed-issues-2.png)
 
 ## Testing 
 
