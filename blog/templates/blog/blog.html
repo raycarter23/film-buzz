@@ -9,9 +9,10 @@ Blog
     {% if featured_post %}
     <div class="overflow-hidden">
         <a class="relative bg-black/10" href="{% url 'details' featured_post.category.slug featured_post.slug %}">
-            <img class="w-full h-[500px] object-cover rounded-md hover:scale-110 ease-in-out duration-200"
+            <img class="w-full h-[320px] md:h-[500px] object-cover rounded-md hover:scale-110 ease-in-out duration-200"
                 src="{{featured_post.image.url}}" alt="{{featured_post.title}}">
-            <h2 class="text-5xl font-bold text-white absolute bottom-5 left-5 shadow-lg stroke-black stroke-2 z-10">
+            <h2
+                class="text-3xl md:text-5xl font-bold text-white absolute bottom-5 left-5 shadow-lg stroke-black stroke-2 z-10">
                 {{featured_post.title}}</h2>
             <div class="w-full h-[500px] bg-black/20 absolute top-0 left-0 pointer-events-none">
 
@@ -21,7 +22,7 @@ Blog
     {% endif %}
     <section>
         <h1 class="text-2xl text-[#294E79] mt-10 mb-8 font-semibold">Browse by movie genre</h1>
-        <div class=" grid grid-cols-5 gap-12">
+        <div class=" grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-12">
             <a href="{% url 'category' 'action'%}" target="_blank"
                 class="border border-[#79425B] border-solid px-6 py-3 flex flex-col justify-center items-center rounded-lg">
                 <img src="https://res.cloudinary.com/dxqfzsh70/image/upload/v1734707801/action-removebg-preview_weril4.png"
@@ -85,18 +86,18 @@ Blog
         </div>
     </section>
     <h1 class="text-3xl text-center text-[#294E79] mt-10 mb-8 font-bold">Recent Posts</h1>
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="grid gap-6 justify-center sm:grid-cols-2 lg:grid-cols-3">
         {% for post in posts %}
         <a href=" {% url 'details' post.category.slug post.slug %}" class="max-w-xs">
             <img src="{{post.image.url}}" class="mb-5 rounded-lg h-[180px] w-[360px] shadow-md" alt="{{post.title}}">
-            <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+            <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900">
                 <p class="text-[#294E79] mb-1">{{post.title}}</p>
                 <span
                     class="text-sm font-semibold bg-[#79425B] px-4 py-1 text-white rounded-lg">{{post.category}}</span>
             </h2>
-            <p class="mb-4 text-gray-500 dark:text-gray-400">{{post.content|slice:"0:100"|safe}}...</p>
+            <p class="mb-4 text-gray-500">{{post.content|slice:"0:100"|safe}}...</p>
             <p
-                class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 hover:no-underline">
                 {{post.created_at|timesince}}
                 ago
             </p>
