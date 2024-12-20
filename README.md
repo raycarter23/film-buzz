@@ -344,15 +344,15 @@ I used [Figma](https://www.figma.com/) to create low-fidelity and high-fidelity 
 
 I created an Entity Relationship Diagram using [Miro](https://miro.com/) to visually represent the relationships between the data models in Film Buzz, such as users, posts, comments, categories, and watchlists. This diagram highlights key relationships, such as the one-to-many connection between users and posts, and the many-to-many self-referential relationship for followers. 
 
-To improve clarity, I colour-coded the database tables: standard models, such as users, posts and comments, are shown in grey; while custom models, such as watchlists, categories, follows and flagged posts, are displayed in blue. This approach ensures the database structure aligns with the application’s requirements and supports features like flagging posts, filtering by categories, and tracking personalised watchlists.
+To improve clarity, I colour-coded the database tables: standard models, such as users, posts and comments, are shown in grey; while custom models, such as watchlists, and categories are displayed in blue. This approach ensures the database structure aligns with the application’s requirements and supports features like filtering by categories, and tracking personalised watchlists.
 
 ### Entity Relationship Diagram
 
-![ER Diagram](documentation/images/film-buzz-er-diagram.jpg)
+![ER Diagram](documentation/images/updated-ER-diagram.jpg)
 
 ### Models Overview
 
-The Film Buzz platform uses three standard models (**User**, **Post**, and **Commen**t) and four custom models (**Category**, **Watchlist**, **Follow**, and **FlaggedPost**) to manage its data structure. The standard models provide the foundation for user authentication, content creation, and engagement, while the custom models introduce features such as post categorisation, personalised watchlists, social connections, and content moderation. These models are interconnected through carefully designed foreign key relationships, ensuring data integrity, consistency, and efficient interaction across the platform's features.
+The Film Buzz platform uses three standard models (**User**, **Post**, and **Commen**t) and two custom models (**Category**, and **Watchlist**) to manage its data structure. The standard models provide the foundation for user authentication, content creation, and engagement, while the custom models introduce features such as post-categorisation and personalised watchlists. These models are interconnected through carefully designed foreign key relationships, ensuring data integrity, consistency, and efficient interaction across the platform's features.
 
 ### Standard Models 
 
@@ -400,7 +400,6 @@ The Post model represents a blog post or movie review created by a user on the F
 |               | `created_at` | TIMESTAMP    | Records the date and time the post was created |
 |               | `updated_at` | TIMESTAMP    | Records the date and time the post was last modified |
 | **Foreign Key**| `author_id`  | INTEGER (FK) | Links the post to the user who created it |
-|               | `is_flagged` | BOOLEAN      | Indicates whether the post is flagged for review |
 |               | `category`   | VARCHAR(20)  | Categorises the post into a specific genre or type |
 
 **Relationships**
@@ -479,47 +478,6 @@ The Watchlist model represents a personalised list of movies that a user wants t
   - The `user_id` field acts as a foreign key linking the Watchlist model to the User model.
 
 ---
-
-**Follow Model**
-
-The Follow model represents the social relationship between users on Film Buzz, allowing one user to follow another. This feature fosters community interaction and connection by enabling users to stay updated with posts and activities from those they follow.
-
-- Follow Model
-
-| Key           | Field       | Type         | Purpose                                  |
-|---------------|-------------|--------------|------------------------------------------|
-| **Primary Key** | `follow_id` | INTEGER (PK) | Unique identifier for each follow relationship |
-| **Foreign Key**| `follower_id`| INTEGER (FK) | Links the follower to the User model     |
-| **Foreign Key**| `followed_id`| INTEGER (FK) | Links the followed user to the User model |
-|               | `created_at` | TIMESTAMP    | Records when the follow relationship was created |
-
-**Relationships**
-
-- **Many-to-Many Self-Referential Relationship**:
-  - A user can follow multiple other users, and a user can be followed by multiple users.
-  - Implemented using the Follow table, which connects the `follower_id` and `followed_id` fields to the same User model.
-
----
-
-**FlaggedPost Model**
-
-The FlaggedPost model represents posts on Film Buzz that users or admins have flagged for review. This table tracks flagged posts, the reason for flagging, and the time the flag was created. It enables site administrators to efficiently review and moderate potentially problematic content.
-
-- FlaggedPost Model
-
-| Key           | Field         | Type         | Purpose                                  |
-|---------------|---------------|--------------|------------------------------------------|
-| **Primary Key** | `flagged_id` | INTEGER (PK) | Unique identifier for each flagged record |
-| **Foreign Key**| `post_id`     | INTEGER (FK) | Links the flagged record to the Post model |
-|               | `flagged_reason` | VARCHAR(255) | Provides the reason for flagging the post |
-|               | `flagged_at`  | TIMESTAMP    | Records when the post was flagged        |
-
-**Relationships**
-
-- **One-to-One with Post**:
-  - Each flagged post in the FlaggedPost table corresponds to exactly one post in the Post model.
-  - The `post_id` field serves as a foreign key linking the two models.
-
 
 ## Agile Development Process
 
