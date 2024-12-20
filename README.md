@@ -101,6 +101,8 @@ Film Buzz is designed to cater to a wide range of movie lovers, each with unique
 
 ### Design Inspiration
 
+For detailed information on the research process and design inspiration for this project, please see the [research.md](https://github.com/raycarter23/film-buzz/blob/main/research.md) file.
+
 ### Colour Scheme
 
 - YinMn Blue `#294E79` - used as the primary site colour, and secondary background colour for the footer.
