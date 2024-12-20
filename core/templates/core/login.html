@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         textarea,
@@ -17,12 +17,12 @@
 </head>
 
 <body>
-    <div class="w-full flex gap-12">
-        <div class="h-screen w-3/5">
+    <div class="w-full flex flex-col lg:flex-row gap-6 lg:gap-12">
+        <div class="lg:w-3/5">
             <img src="https://res.cloudinary.com/dxqfzsh70/image/upload/v1733951814/movie-poster-background-jd1c45cjm7vba7gg_1_mvllix.png"
-                alt="Movie Poster">
+                class="h-[480px] md:h-[560px] lg:h-screen object-cover w-screen lg:w-full" alt="Movie Poster">
         </div>
-        <div class="flex flex-col justify-center px-4 py-8 w-2/5">
+        <div class="flex flex-col items-center lg:items-start justify-center px-4 py-8 lg:w-2/5">
             <div class="mb-8">
                 <a href="{% url 'home' %}"><img class="h-14"
                         src="https://raw.githubusercontent.com/raycarter23/film-buzz/refs/heads/main/documentation/images/logo.png"

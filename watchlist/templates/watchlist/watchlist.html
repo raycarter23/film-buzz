@@ -6,14 +6,14 @@ My Watchlist
 
 {% block content %}
 <div class="container mx-auto px-4 py-8">
-    <form method="get" action="{% url 'search_movies' %}" class="">
+    <form method="get" action="{% url 'search_movies' %}" class="flex justify-center items-center gap-2">
         <input type="text" name="query" placeholder="Search for Movies..." class="p-2 rounded border">
         <button type="submit" class="bg-[#294e79] p-2 rounded">
             <i class="fas fa-search text-white"></i>
         </button>
     </form>
     <h1 class="text-2xl text-center py-4">{{request.user.first_name}}'s Watchlist ({{watchlist|length}})</h1>
-    <div class="grid grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {% for entry in watchlist %}
         <div class="bg-white shadow-md rounded-lg overflow-hidden">
             <img class="w-full h-96 object-cover" src="{{entry.movie.poster}}" alt="{{entry.movie.title}}">
