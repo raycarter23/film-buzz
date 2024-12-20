@@ -35,6 +35,17 @@ def comment(request, category_slug, slug):
     comments = post.comments.all()
     return render(request, 'blog/details.html', {'post': post, 'comments': comments, 'form': form})
 
+def edit_comment(request, category_slug, comment_id, slug):
+    comment = get_object_or_404(Comment, id=comment_id)
+    if request.method == 'POST' and comment.user == request.user:
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            return redirect('details', category_slug=category_slug, slug=slug)
+    else:
+        form = CommentForm(instance=comment)
+    return render(request, 'blog/edit_comment.html', {'form': form, 'post': comment.post})
+
 def delete_comment(request, category_slug, comment_id, slug):
     comment = get_object_or_404(Comment, id=comment_id)
     if request.method == 'POST' and comment.user == request.user:
