@@ -546,10 +546,6 @@ Additional details can be found in the [requirements.txt](https://github.com/ray
 
 ## Credits
 
-### Content
+For a comprehensive list of sources referenced in this project, please see the [credits.md](https://github.com/raycarter23/film-buzz/blob/main/credits.md) file.
 
-### Code
-
-### Media
-
-### Acknowledgements
+## Acknowledgements

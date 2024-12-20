@@ -1,4 +1,9 @@
+# Research 
+
+Navigate back to the [README.md](https://github.com/raycarter23/film-buzz/blob/main/README.md) file.
+
 ## Research and Design Inspiration
+
 
 My initial idea was to create a film recommendation website, with a social element to it. I was inspired by **Letterboxd** and **JustWatch**, and initially wanted to create a website which blended elements of both sites, such as the ability for users to review movies and to also find movie recommendations.
 
