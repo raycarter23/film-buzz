@@ -19,10 +19,75 @@ Blog
         </a>
     </div>
     {% endif %}
-    <h1 class="text-3xl text-center text-[#294E79] mt-10 mb-8">Recent Posts</h1>
+    <section>
+        <h1 class="text-2xl text-[#294E79] mt-10 mb-8 font-semibold">Browse by movie genre</h1>
+        <div class=" grid grid-cols-5 gap-12">
+            <a href="{% url 'category' 'action'%}"
+                class="border border-[#79425B] border-solid px-6 py-3 flex flex-col justify-center items-center rounded-lg">
+                <img src="https://res.cloudinary.com/dxqfzsh70/image/upload/v1734707801/action-removebg-preview_weril4.png"
+                    alt="Action Image" class="h-20">
+                <p class="text-[#79425B] font-bold text-2xl">Action</p>
+            </a>
+            <a href="{% url 'category' 'sci-fi'%}"
+                class="border border-[#79425B] border-solid px-6 py-3 flex flex-col justify-center items-center rounded-lg">
+                <img src="https://res.cloudinary.com/dxqfzsh70/image/upload/v1734707801/sci-fi-removebg-preview_t2aec1.png"
+                    alt="Sci-Fi Image" class="h-20">
+                <p class="text-[#79425B] font-bold text-2xl">Sci-Fi</p>
+            </a>
+            <a href="{% url 'category' 'romance'%}"
+                class="border border-[#79425B] border-solid px-6 py-3 flex flex-col justify-center items-center rounded-lg">
+                <img src="https://res.cloudinary.com/dxqfzsh70/image/upload/v1734707802/Romance-removebg-preview_wwemxc.png"
+                    alt="Romance Image" class="h-20">
+                <p class="text-[#79425B] font-bold text-2xl">Romance</p>
+            </a>
+            <a href="{% url 'category' 'drama'%}"
+                class="border border-[#79425B] border-solid px-6 py-3 flex flex-col justify-center items-center rounded-lg">
+                <img src="https://res.cloudinary.com/dxqfzsh70/image/upload/v1734707801/Drama-removebg-preview_ymc4pl.png"
+                    alt="Drama Image" class="h-20">
+                <p class="text-[#79425B] font-bold text-2xl">Drama</p>
+            </a>
+            <a href="{% url 'category' 'thriller'%}"
+                class="border border-[#79425B] border-solid px-6 py-3 flex flex-col justify-center items-center rounded-lg">
+                <img src="https://res.cloudinary.com/dxqfzsh70/image/upload/v1734707801/Thriller-removebg-preview_hedivc.png"
+                    alt="Thriller Image" class="h-20">
+                <p class="text-[#79425B] font-bold text-2xl">Thriller</p>
+            </a>
+            <a href="{% url 'category' 'comedy'%}"
+                class="border border-[#79425B] border-solid px-6 py-3 flex flex-col justify-center items-center rounded-lg">
+                <img src="https://res.cloudinary.com/dxqfzsh70/image/upload/v1734707801/Comedy-removebg-preview_gu6hvb.png"
+                    alt="Comedy Image" class="h-20">
+                <p class="text-[#79425B] font-bold text-2xl">Comedy</p>
+            </a>
+            <a href="{% url 'category' 'crime'%}"
+                class="border border-[#79425B] border-solid px-6 py-3 flex flex-col justify-center items-center rounded-lg">
+                <img src="https://res.cloudinary.com/dxqfzsh70/image/upload/v1734707801/Crime-removebg-preview_bkyzok.png"
+                    alt="Crime Image" class="h-20">
+                <p class="text-[#79425B] font-bold text-2xl">Crime</p>
+            </a>
+            <a href="{% url 'category' 'biopic'%}"
+                class="border border-[#79425B] border-solid px-6 py-3 flex flex-col justify-center items-center rounded-lg">
+                <img src="https://res.cloudinary.com/dxqfzsh70/image/upload/v1734707801/biopic-removebg-preview_zslqoh.png"
+                    alt="Biopic Image" class="h-20">
+                <p class="text-[#79425B] font-bold text-2xl">Biopic</p>
+            </a>
+            <a href="{% url 'category' 'horror'%}"
+                class="border border-[#79425B] border-solid px-6 py-3 flex flex-col justify-center items-center rounded-lg">
+                <img src="https://res.cloudinary.com/dxqfzsh70/image/upload/v1734707802/Horror__2_-removebg-preview_jvpyyy.png"
+                    alt="Horror Image" class="h-20">
+                <p class="text-[#79425B] font-bold text-2xl">Horror</p>
+            </a>
+            <a href="{% url 'category' 'family'%}"
+                class="border border-[#79425B] border-solid px-6 py-3 flex flex-col justify-center items-center rounded-lg">
+                <img src="https://res.cloudinary.com/dxqfzsh70/image/upload/v1734707802/family-removebg-preview_ncbdy5.png"
+                    alt="Family Image" class="h-20">
+                <p class="text-[#79425B] font-bold text-2xl">Family</p>
+            </a>
+        </div>
+    </section>
+    <h1 class="text-3xl text-center text-[#294E79] mt-10 mb-8 font-bold">Recent Posts</h1>
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {% for post in posts %}
-        <a href="{% url 'details' post.category.slug post.slug %}" class="max-w-xs">
+        <a href=" {% url 'details' post.category.slug post.slug %}" class="max-w-xs">
             <img src="{{post.image.url}}" class="mb-5 rounded-lg h-[180px] w-[360px] shadow-md" alt="{{post.title}}">
             <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
                 <p class="text-[#294E79] mb-1">{{post.title}}</p>
