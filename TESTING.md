@@ -24,6 +24,28 @@ Navigate back to the [README.md](https://github.com/raycarter23/film-buzz/blob/m
 
 Below are all of my implemented user stories, with accompanying screenshots to demonstrate their functionality and how they meet the project requirements.
 
+| ID  | User Story                                                                                  | Implementation |
+|-----|---------------------------------------------------------------------------------------------|----------------|
+| 1   | As a first-time site visitor, I can clearly see the website's purpose so that I can use it in the future. | [Website's Purpose]()           |
+| 2   | As a developer, I can get an idea of the whole design system so that I can work on the UI/UX design.       | [Whole Design System]()           |
+| 3   | As a developer, I can get an idea of which components to build so that I can work on the design system.    | [Design System Components]()           |
+| 4   | As a developer, I can build the pages based on the Figma designs so that I can check how the website looks in real time. | [Figma Designs]()           |
+| 5   | As a user, I can create an account so that I can make my profile.                                         | [Create an account]()           |
+| 6   | As a registered user, I can log in to my account so that I can access the site.                           | [Login to account]()           |
+| 7   | As a registered user, I can log out of my account so that I can delete the session on my current device.  | [Log out of account]()           |
+| 8   | As a registered user, I can update my profile information so that other users can identify me.           | [Update my profile]()           |
+| 9   | As a registered user, I can create posts so that I can share my thoughts about different movies.          | [Create Posts]()           |
+| 10  | As an author, I can edit my posts so that I can correct information in the future.                        | [Edit Posts]()           |
+| 11  | As an author, I can delete my posts so that I can remove content that I no longer want to be published.   | [Delete Posts]()           |
+| 12  | As a user, I can view all the posts so that I can learn about different movies.                           | [View all Posts]()           |
+| 13  | As a registered user, I can comment on other users' posts so that I can engage with them in a discussion. | [Comment on other posts]()           |
+| 14  | As a commenter, I can edit my existing comments so that I can correct information.                        | [Edit my Comments]()           |
+| 15  | As a commenter, I can delete existing comments so that I can remove my opinions.                         | [Delete my Comments]()           |
+| 16  | As a user, I can filter posts so that I can view posts of a specific movie genre.                         | [Filter Posts]()           |
+| 17  | As a user, I can search posts so that I can filter posts based on titles.                                 | [Search Posts]()           |
+| 18  | As a registered user, I can create, update, and delete my own watchlist so that I can track movies I am interested in watching. | [Create, update and delete Watchlist]()           |
+| 19  | As a site visitor/user, I can easily navigate the site on any device so that I have a seamless experience whether on desktop or mobile. | [Responsive Navigation]()           |
+| 20  | As an admin, I can add, edit, or delete posts so that the database remains accurate.                      | [Admin - add, edit, or delete posts]()           |
 
 
 
