@@ -605,19 +605,63 @@ Follow these steps:
 
 ## Tools & Technologies Used 
 
-### Libraries and Frameworks
+### Technologies and Languages
 
--
--
--
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML): Used for structuring the content of the Film Buzz website.
 
-Additional details can be found in the [requirements.txt](https://github.com/raycarter23/film-buzz/blob/main/requirements.txt) file
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS): Used for styling the layout and design of the website.
 
-### Tools and Programmes 
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript): Added interactivity to the site, including dynamic elements.
 
--
--
--
+- [Python](https://www.python.org/doc/): Backend language for building the logic of the Film Buzz platform.
+
+- [PostgreSQL](https://www.postgresql.org/docs/): Database used to store user and movie data.
+
+### Frameworks and Libraries
+
+- [Django](https://docs.djangoproject.com/en/): Used as the web framework to build the backend of the Film Buzz project.
+
+- [Tailwind CSS](https://tailwindcss.com/docs): CSS framework used to simplify styling and ensure responsiveness.
+
+- [Cloudinary](https://cloudinary.com/documentation): Managed media uploads and optimised image storage for the project.
+
+- [Whitenoise](https://whitenoise.readthedocs.io/en/stable/django.html): Simplified static file serving for deployment.
+
+- [Font Awesome](https://fontawesome.com/): Provided scalable icons and fonts used throughout the website.
+
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/): Enhanced the styling of Django forms for a better user experience.
+
+- [Django Summernote](https://summernote.org/): Integrated as a rich text editor for creating blog posts.
+
+### Developer Tools
+
+- [Git](https://git-scm.com/doc): Used for version control to track changes and manage code repositories.
+
+- [GitHub](https://docs.github.com/en): Hosted the project repository, making collaboration and version tracking seamless.
+
+- [GitPod](https://gitpod.io/): Cloud-based IDE for developing the Film Buzz project in a flexible environment.
+
+- [Heroku](https://www.heroku.com/): Deployed the project to a live environment for public access.
+
+- [Python Decouple](https://github.com/henriquebastos/python-decouple): Managed environment variables for security and configuration.
+
+- [python-dotenv](https://pypi.org/project/python-dotenv/): Used to load environment variables from a .env file into the project.
+
+- [Gunicorn](https://gunicorn.org/): WSGI server used to run the Django application in production.
+
+### Design Tools
+
+- [Figma](https://www.figma.com/): Created wireframes and mockups for the project’s UI/UX design.
+
+- [Miro](https://miro.com/): Used to design the ER diagram and aid in project ideation.
+
+- [Readme.so](https://readme.so/): Assisted in generating structured and well-organized README documentation.
+
+- [ChatGPT](https://chat.openai.com/): Provided solutions for development issues, technical explanations, and creative inputs.
+
+- [Perplexity](https://www.perplexity.ai/): Used for researching technical solutions and understanding complex topics.
+
+Additional details on the python packages that were used can be found in the [requirements.txt](https://github.com/raycarter23/film-buzz/blob/main/requirements.txt) file
 
 ## Credits
 
